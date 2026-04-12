@@ -1,0 +1,40 @@
+# Preprocessing Configuration for HELOC Dataset
+
+special_values:
+  minus_9:
+    action: "remove_rows"
+    description: "Missing or insufficient data"
+    rows_removed: 588
+
+  minus_7:
+    action: "replace_with_strings"
+    description: "Insufficient or account not active"
+    total_replaced: 206
+    mappings:
+      MSinceMostRecentDelq: "Never Had Delinquency"
+      MSinceMostRecentInqexcl7days: "No Credit Inquiry"
+
+  minus_8:
+    action: "replace_with_strings"
+    description: "Applicant too young or account not active"
+    total_replaced: 11072
+    mappings:
+      MSinceOldestTradeOpen: "New to Credit System"
+      PercentTradesWBalance: "No Valid Credit Accounts"
+      NumRevolvingTradesWBalance: "No Revolving Accounts"
+      NumBank2NatlTradesWHighUtilization: "No Bank Revolving"
+      NetFractionRevolvingBurden: "No Revolving Burden"
+      NumInstallTradesWBalance: "No Installment Loans"
+      NetFractionInstallBurden: "No Installment Burden"
+      MSinceMostRecentDelq: "No Payment History"
+      MSinceMostRecentInqexcl7days: "No Inquiry Record"
+
+data_paths:
+  raw_input: "data/raw/heloc_dataset.csv"
+  processed_output: "data/processed/heloc_dataset_cleaned.csv"
+
+final_stats:
+  original_rows: 10459
+  final_rows: 9861
+  rows_removed: 598
+  percentage_removed: 5.72

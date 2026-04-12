@@ -1,4 +1,0 @@
-Dataset,N. features numeriche,N. features categoriche,N. totale features,N. campioni originali,N. campioni post pulizia,N. righe eliminate
-heloc_dataset,23,1,24,10459,10459,0
-heloc_cleaned,23,1,24,10459,10459,0
-heloc_no_na,23,1,24,10459,2502,7957
