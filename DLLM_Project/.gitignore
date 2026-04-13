@@ -1,7 +1,3 @@
-# Data files - keep only config/mappings, exclude actual data
-data/raw/*.csv
-data/processed/*.csv
-
 # Intermediate processing files
 *.tmp
 
