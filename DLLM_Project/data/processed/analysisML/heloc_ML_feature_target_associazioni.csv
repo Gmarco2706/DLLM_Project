@@ -1,0 +1,35 @@
+dataset,feature,tipo_feature,target,metrica_usata,valore_associazione
+heloc_ML,ExternalRiskEstimate,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.4603807114981557
+heloc_ML,NetFractionRevolvingBurden,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.335938335971712
+heloc_ML,PercentTradesWBalance,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.2764541656114181
+heloc_ML,PercentTradesNeverDelq,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.25759058873052554
+heloc_ML,AverageMInFile,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.246518066789742
+heloc_ML,MaxDelq2PublicRecLast12M,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.23689503342318496
+heloc_ML,MSinceMostRecentDelq_never,Categorica,RiskPerformance,V di Cramér,0.23024112146147976
+heloc_ML,NumBank2NatlTradesWHighUtilization,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.21768228565410566
+heloc_ML,MaxDelqEver,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.21689379240388623
+heloc_ML,MSinceOldestTradeOpen,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.20511850536608167
+heloc_ML,NumTrades60Ever2DerogPubRec,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.1691806744387858
+heloc_ML,MSinceMostRecentInqexcl7days,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.16394974960841485
+heloc_ML,MSinceMostRecentInqexcl7days_no_trades,Categorica,RiskPerformance,V di Cramér,0.15692179293085914
+heloc_ML,NumInqLast6M,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.14336592445718058
+heloc_ML,NumSatisfactoryTrades,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.1411205992207324
+heloc_ML,PercentInstallTrades,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.14053480124627377
+heloc_ML,NumTrades90Ever2DerogPubRec,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.13962177596559172
+heloc_ML,NumInqLast6Mexcl7days,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.13771664129234717
+heloc_ML,NumRevolvingTradesWBalance,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.11638375276028727
+heloc_ML,NumBank2NatlTradesWHighUtilization_no_trades,Categorica,RiskPerformance,V di Cramér,0.10073717877994276
+heloc_ML,NumTotalTrades,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.10067887217356894
+heloc_ML,NetFractionInstallBurden,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.09493427844022344
+heloc_ML,MSinceMostRecentInqexcl7days_never,Categorica,RiskPerformance,V di Cramér,0.08874962077247522
+heloc_ML,NumTradesOpeninLast12M,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.07769730330480738
+heloc_ML,NetFractionRevolvingBurden_no_trades,Categorica,RiskPerformance,V di Cramér,0.07445825511295609
+heloc_ML,NetFractionInstallBurden_no_trades,Categorica,RiskPerformance,V di Cramér,0.07392471849659397
+heloc_ML,NumRevolvingTradesWBalance_no_trades,Categorica,RiskPerformance,V di Cramér,0.07254649407437451
+heloc_ML,NumInstallTradesWBalance,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.05968595687280343
+heloc_ML,MSinceMostRecentTradeOpen,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.054188181741751086
+heloc_ML,NumInstallTradesWBalance_no_trades,Categorica,RiskPerformance,V di Cramér,0.035857421600579475
+heloc_ML,MSinceMostRecentDelq,Numerica,RiskPerformance,η (Correlation Ratio Eta),0.02794117694333447
+heloc_ML,MSinceMostRecentDelq_no_trades,Categorica,RiskPerformance,V di Cramér,0.015351077301145467
+heloc_ML,PercentTradesWBalance_no_trades,Categorica,RiskPerformance,V di Cramér,0.003962028172475515
+heloc_ML,MSinceOldestTradeOpen_no_trades,Categorica,RiskPerformance,V di Cramér,0.0
