@@ -1,0 +1,33 @@
+feature,componente,tipo_feature,metrica,valore
+ExternalRiskEstimate,numerica,Numerica (pura),Eta,0.4603807114981557
+MSinceMostRecentInqexcl7days,categorica,Mista (componente categorica),Cramér's V,0.35648775756055684
+NetFractionRevolvingBurden,numerica,Mista (componente numerica),Eta,0.355799203833386
+PercentTradesWBalance,numerica,Mista (componente numerica),Eta,0.27940029856937176
+PercentTradesNeverDelq,numerica,Numerica (pura),Eta,0.25759058873052554
+AverageMInFile,numerica,Numerica (pura),Eta,0.246518066789742
+NumBank2NatlTradesWHighUtilization,numerica,Mista (componente numerica),Eta,0.24545283516877928
+MaxDelq2PublicRecLast12M,numerica,Numerica (pura),Eta,0.23689503342318496
+MaxDelqEver,numerica,Numerica (pura),Eta,0.21689379240388623
+MSinceOldestTradeOpen,numerica,Mista (componente numerica),Eta,0.2159609112963435
+MSinceMostRecentInqexcl7days,numerica,Mista (componente numerica),Eta,0.19268435791003455
+MSinceMostRecentDelq,numerica,Mista (componente numerica),Eta,0.19017768173323932
+NumTrades60Ever2DerogPubRec,numerica,Numerica (pura),Eta,0.1691806744387858
+NumInqLast6M,numerica,Numerica (pura),Eta,0.14336592445718058
+NumSatisfactoryTrades,numerica,Numerica (pura),Eta,0.1411205992207324
+PercentInstallTrades,numerica,Numerica (pura),Eta,0.14053480124627377
+NumTrades90Ever2DerogPubRec,numerica,Numerica (pura),Eta,0.13962177596559172
+NumInqLast6Mexcl7days,numerica,Numerica (pura),Eta,0.13771664129234717
+NumRevolvingTradesWBalance,numerica,Mista (componente numerica),Eta,0.13130692975471409
+NumTotalTrades,numerica,Numerica (pura),Eta,0.10067887217356894
+NumTradesOpeninLast12M,numerica,Numerica (pura),Eta,0.07769730330480738
+NetFractionInstallBurden,numerica,Mista (componente numerica),Eta,0.07387470255444646
+MSinceMostRecentDelq,categorica,Mista (componente categorica),Cramér's V,0.0723828893353783
+MSinceMostRecentTradeOpen,numerica,Numerica (pura),Eta,0.054188181741751086
+NumInstallTradesWBalance,numerica,Mista (componente numerica),Eta,0.05083987200020036
+MSinceOldestTradeOpen,categorica,Mista (componente categorica),Cramér's V,0.0
+NumBank2NatlTradesWHighUtilization,categorica,Mista (componente categorica),Cramér's V,0.0
+NetFractionRevolvingBurden,categorica,Mista (componente categorica),Cramér's V,0.0
+NumInstallTradesWBalance,categorica,Mista (componente categorica),Cramér's V,0.0
+NumRevolvingTradesWBalance,categorica,Mista (componente categorica),Cramér's V,0.0
+NetFractionInstallBurden,categorica,Mista (componente categorica),Cramér's V,0.0
+PercentTradesWBalance,categorica,Mista (componente categorica),Cramér's V,0.0
