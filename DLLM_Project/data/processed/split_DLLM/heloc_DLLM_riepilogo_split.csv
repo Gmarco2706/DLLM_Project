@@ -1,0 +1,5 @@
+Dataset,Split,Ruolo,N. campioni,% sul totale,Bad,Good
+heloc_DLLM,Imputation Train,Addestr. modello imputazione,3944,40.0%,2051,1893
+heloc_DLLM,Imputation Test,Valut. imputazione + train ML,2958,30.0%,1538,1420
+heloc_DLLM,Hold-out,Test finale (mai corrotto),2959,30.0%,1539,1420
+heloc_DLLM,TOTALE,—,9861,100.0%,5128,4733
