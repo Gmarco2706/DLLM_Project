@@ -1,5 +1,0 @@
-Split,Ruolo,N. campioni,% sul totale,Bad,Good
-Imputation Train,Addestr. modello imputazione,3944,40.0%,2051,1893
-Imputation Test,Valut. imputazione + train ML,2958,30.0%,1538,1420
-Hold-out,Test finale (mai corrotto),2959,30.0%,1539,1420
-TOTALE,—,9861,100.0%,5128,4733
