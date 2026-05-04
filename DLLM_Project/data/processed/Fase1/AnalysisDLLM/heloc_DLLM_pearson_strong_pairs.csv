@@ -1,0 +1,11 @@
+Feature 1,Feature 2,r,|r|,n_valid,Interpretazione
+NumInqLast6M,NumInqLast6Mexcl7days,0.9922,0.9922,9861,Forte
+NumTrades60Ever2DerogPubRec,NumTrades90Ever2DerogPubRec,0.8903,0.8903,9861,Forte
+NumSatisfactoryTrades,NumTotalTrades,0.8452,0.8452,9861,Forte
+MSinceOldestTradeOpen,AverageMInFile,0.6943,0.6943,9622,Moderata-forte
+PercentTradesNeverDelq,MaxDelqEver,0.6392,0.6392,9861,Moderata-forte
+NumRevolvingTradesWBalance,NumBank2NatlTradesWHighUtilization,0.6277,0.6277,9285,Moderata-forte
+ExternalRiskEstimate,NetFractionRevolvingBurden,-0.6264,0.6264,9682,Moderata-forte
+MaxDelq2PublicRecLast12M,MaxDelqEver,0.611,0.611,9861,Moderata-forte
+NetFractionRevolvingBurden,PercentTradesWBalance,0.6065,0.6065,9682,Moderata-forte
+NetFractionRevolvingBurden,NumBank2NatlTradesWHighUtilization,0.6054,0.6054,9279,Moderata-forte

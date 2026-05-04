@@ -24,7 +24,7 @@ DLLM_Project/
 
 Il notebook `notebooks/PreProcessing.ipynb` implementa:
 
-1. **Rimozione di righe con -9** (588 righe = 5.62%)
+1. **Rimozione di righe con -9** (598 righe = 5.72%)
 2. **Sostituzione di -7** (206 valori con stringhe semantiche)
 3. **Sostituzione di -8** (11,072 valori con stringhe semantiche)
 
@@ -35,4 +35,4 @@ Vedi `docs/PREPROCESSING.md` per i dettagli completi.
 - Righe originali: 10,459
 - Righe dopo pulizia: 9,861
 - Righe eliminate: 598 (5.72%)
-- Special values rimossi: 11,866 (206 -7 + 11,072 -8 + 588 -9)
+- Special values rimossi: 11,876 (206 -7 + 11,072 -8 + 598 -9)
