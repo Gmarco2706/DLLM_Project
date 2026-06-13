@@ -1,0 +1,26 @@
+#dataset's columns and their meanings
+- RiskPerformance: feature target, indicates if the client is good or bad based on the risk performance .
+- ExternalRiskEstimate: external estimator of the applicant's credit risk.
+- MSinceOldestTradeOpen: how many months passed from the oldest trade opening.
+- MSinceMostRecentTradeOpen: how many month passed from the most recent trade opening.
+- AverageMInFile: The average age, in months, of the credit accounts recorded for this person in all of his credit history.
+- NumSatisfactoryTrades: The number of credit accounts that have been handled in a satisfactory way.
+- NumTrades60Ever2DerogPubRec: The number of accounts that ever reached at least 60 days past due or were linked to serious derogatory public records.
+- NumTrades90Ever2DerogPubRec: The number of accounts that ever reached at least 90 days past due or were linked to serious derogatory public records.
+- PercentTradesNeverDelq: The share of accounts that never became delinquent, reflecting how often the credit history stayed clean without delinquency.
+- MSinceMostRecentDelq: How many months have passed since the most recent delinquency event.
+- MaxDelq2PublicRecLast12M: The worst delinquency or public-record signal seen during the last 12 months.
+- MaxDelqEver: The worst delinquency level ever observed in the applicant’s credit history.
+- NumTotalTrades: The total number of credit accounts in the applicant’s file.
+- NumTradesOpeninLast12M: The number of accounts opened during the last 12 months, capturing recent credit activity.
+- PercentInstallTrades: The percentage of accounts that are installment-based, such as loans paid back in fixed steps.
+- MSinceMostRecentInqexcl7days: How many months have passed since the most recent credit inquiry, ignoring the last 7 days.
+- NumInqLast6M: The total number of credit inquiries in the last 6 months.
+- NumInqLast6Mexcl7days: The number of credit inquiries in the last 6 months, excluding the most recent 7 days.
+- NetFractionRevolvingBurden: A measure of how heavily the applicant is using revolving credit, such as credit cards.
+- NetFractionInstallBurden: A measure of how heavily the applicant is carrying installment debt, such as structured loan payments.
+- NumRevolvingTradesWBalance: The number of revolving accounts that currently still carry a balance.
+- NumInstallTradesWBalance: The number of installment accounts that still have money left to repay.
+- NumBank2NatlTradesWHighUtilization: The number of bank or national trades with high utilization, suggesting stronger pressure on available credit.
+- PercentTradesWBalance: The percentage of accounts that currently have an outstanding balance.
+
