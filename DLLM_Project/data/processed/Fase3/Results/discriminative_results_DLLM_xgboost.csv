@@ -1,0 +1,10 @@
+imputation_method,dataset,missing_strategy,missing_pct,train_file,holdout_file,train_rows,holdout_rows,accuracy,roc_auc,f1_score
+DLLM,heloc_DLLM,MAR,10,heloc_DLLM_discriminative_train_MAR_10.csv,heloc_DLLM_holdout.csv,2958,2959,0.703954,0.770064,0.655389
+DLLM,heloc_DLLM,MAR,25,heloc_DLLM_discriminative_train_MAR_25.csv,heloc_DLLM_holdout.csv,2958,2959,0.700912,0.766589,0.684267
+DLLM,heloc_DLLM,MAR,40,heloc_DLLM_discriminative_train_MAR_40.csv,heloc_DLLM_holdout.csv,2958,2959,0.680297,0.748661,0.636154
+DLLM,heloc_DLLM,MCAR,10,heloc_DLLM_discriminative_train_MCAR_10.csv,heloc_DLLM_holdout.csv,2958,2959,0.704968,0.772815,0.680571
+DLLM,heloc_DLLM,MCAR,25,heloc_DLLM_discriminative_train_MCAR_25.csv,heloc_DLLM_holdout.csv,2958,2959,0.714093,0.782815,0.696339
+DLLM,heloc_DLLM,MCAR,40,heloc_DLLM_discriminative_train_MCAR_40.csv,heloc_DLLM_holdout.csv,2958,2959,0.699223,0.765799,0.66791
+DLLM,heloc_DLLM,MNAR,10,heloc_DLLM_discriminative_train_MNAR_10.csv,heloc_DLLM_holdout.csv,2958,2959,0.710713,0.779313,0.695807
+DLLM,heloc_DLLM,MNAR,25,heloc_DLLM_discriminative_train_MNAR_25.csv,heloc_DLLM_holdout.csv,2958,2959,0.71781,0.779733,0.712367
+DLLM,heloc_DLLM,MNAR,40,heloc_DLLM_discriminative_train_MNAR_40.csv,heloc_DLLM_holdout.csv,2958,2959,0.712065,0.773771,0.697013

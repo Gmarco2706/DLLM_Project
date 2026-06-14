@@ -1,0 +1,494 @@
+ExternalRiskEstimate,MSinceOldestTradeOpen,MSinceMostRecentTradeOpen,AverageMInFile,NumSatisfactoryTrades,NumTrades60Ever2DerogPubRec,NumTrades90Ever2DerogPubRec,PercentTradesNeverDelq,MSinceMostRecentDelq,MaxDelq2PublicRecLast12M,MaxDelqEver,NumTotalTrades,NumTradesOpeninLast12M,PercentInstallTrades,MSinceMostRecentInqexcl7days,NumInqLast6M,NumInqLast6Mexcl7days,NetFractionRevolvingBurden,NetFractionInstallBurden,NumRevolvingTradesWBalance,NumInstallTradesWBalance,NumBank2NatlTradesWHighUtilization,PercentTradesWBalance,RiskPerformance
+75.0,,,84.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,31.0,3.0,32.0,No Credit Inquiry,,0.0,44,,6,3,3,77,Bad
+65.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,8.0,,75.0,No Credit Inquiry,,1.0,103,89,1,4,1,100,Bad
+74.0,,27.0,,20.0,,,86.0,,6.0,2.0,22.0,,,,,1.0,8,56,,3,0,55,Good
+72.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,1.0,57.0,No Credit Inquiry,1.0,1.0,45,63,,3,1,80,Bad
+79.0,,16.0,112.0,,,,100.0,Never Had Delinquency,7.0,8.0,22.0,,,,,0.0,25,No Installment Burden,,1,1,64,Good
+71.0,,,,,,,85.0,,6.0,5.0,13.0,,,0,,1.0,36,,,2,1,100,Bad
+71.0,,,,,,,91.0,,0.0,2.0,,3.0,,0,,2.0,29,,4,2,1,50,Bad
+73.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,1,,1.0,76,,1,2,1,75,Bad
+73.0,,3.0,,13.0,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,13.0,,38.0,,,4.0,22,,,2,0,63,Bad
+77.0,,4.0,59.0,,,,93.0,59,6.0,6.0,45.0,,,,,2.0,10,65,3,1,0,45,Bad
+79.0,233,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,8.0,33,,6,6,2,63,Bad
+56.0,,,55.0,28.0,,,78.0,,4.0,2.0,,,,1,1.0,1.0,43,85,,4,4,81,Bad
+67.0,,,52.0,,1.0,,67.0,,6.0,5.0,15.0,2.0,,,0.0,0.0,69,33,4,2,2,86,Good
+78.0,125,,63.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,20.0,,,No Inquiry Record,,0.0,39,,,4,1,100,Bad
+90.0,,,90.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,0.0,0.0,2,No Installment Burden,,1,0,50,Good
+65.0,228,5.0,,,,2.0,85.0,3,0.0,2.0,27.0,,,,,0.0,13,,,2,0,46,Good
+60.0,,,,,,0.0,95.0,,4.0,6.0,,,23.0,,,6.0,30,,,3,2,47,Bad
+71.0,227,12.0,,,,,78.0,,6.0,4.0,,,,,,2.0,83,No Installment Burden,,1,2,60,Good
+63.0,170,,,27.0,,,74.0,,6.0,2.0,38.0,,,5,1.0,1.0,64,,,2,2,90,Good
+81.0,,,,3.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,No Revolving Burden,,No Revolving Accounts,2,No Bank Revolving,100,Bad
+65.0,,,,,,0.0,93.0,,4.0,6.0,,,,,,0.0,65,,,3,0,71,Bad
+60.0,,,157.0,15.0,,,48.0,3,4.0,4.0,,0.0,,,,2.0,55,,,2,0,100,Good
+65.0,181,,,,,,91.0,,4.0,6.0,,1.0,52.0,5,,1.0,40,88,,3,2,64,Bad
+60.0,,,93.0,,4.0,,73.0,,4.0,2.0,15.0,,,,0.0,0.0,34,,1,3,0,50,Bad
+85.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,1.0,5,No Installment Burden,3,No Installment Loans,1,60,Good
+61.0,,46.0,105.0,,,,77.0,,6.0,5.0,,0.0,,,,3.0,65,No Installment Burden,4,1,3,83,Good
+85.0,,9.0,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,0.0,30,,3,1,0,67,Good
+79.0,,2.0,,18.0,,,100.0,Never Had Delinquency,7.0,8.0,,,37.0,,,1.0,13,,,3,0,56,Good
+71.0,New to Credit System,,43.0,15.0,,,93.0,,6.0,6.0,,1.0,,No Credit Inquiry,,2.0,44,89,3,3,0,75,Good
+68.0,,,56.0,,,1.0,83.0,,4.0,3.0,,1.0,,,,1.0,27,,,3,1,60,Good
+80.0,117,2.0,,22.0,,0.0,96.0,59,6.0,6.0,,3.0,,No Credit Inquiry,,1.0,2,No Installment Burden,,1,1,25,Good
+59.0,,,77.0,,,,90.0,,4.0,6.0,,,22.0,No Credit Inquiry,5.0,3.0,42,80,,4,3,70,Bad
+57.0,,10.0,,7.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,,0.0,0.0,97,,,2,3,100,Bad
+69.0,,,55.0,11.0,1.0,,93.0,,5.0,2.0,14.0,,36.0,No Inquiry Record,,0.0,24,49,,3,0,86,Good
+66.0,,,,14.0,,,93.0,27,6.0,6.0,,,,,,0.0,51,,2,2,2,67,Bad
+71.0,,3.0,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,0,,6.0,31,99,4,3,0,39,Good
+66.0,263,,103.0,,,0.0,94.0,,4.0,6.0,,,,,,2.0,14,48,,4,2,61,Good
+88.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,53.0,4,,1.0,2,82,,2,0,50,Good
+71.0,282,,73.0,,0.0,,96.0,No Payment History,6.0,6.0,,,,,,2.0,37,,,1,1,80,Bad
+58.0,,2.0,32.0,,0.0,0.0,94.0,,4.0,6.0,,,,0,,2.0,69,,,2,4,67,Bad
+84.0,,3.0,84.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,,5.0,0,51,2,3,0,63,Good
+79.0,,,,23.0,,0.0,96.0,,6.0,5.0,,,15.0,No Credit Inquiry,,2.0,9,No Installment Burden,4,No Installment Loans,1,44,Bad
+84.0,,,37.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,4.0,29.0,No Credit Inquiry,,3.0,16,No Installment Burden,,1,0,75,Good
+55.0,25,5.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,5.0,,0,1.0,1.0,97,93,,2,2,100,Bad
+79.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,1.0,1.0,36,50,,2,1,57,Good
+67.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Inquiry Record,0.0,0.0,90,,,3,3,100,Good
+88.0,232,5.0,92.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,70.0,No Inquiry Record,0.0,0.0,0,,0,3,0,60,Good
+69.0,,,,,,,93.0,,4.0,6.0,,,,,2.0,2.0,46,68,,2,0,100,Good
+72.0,,,,,,,96.0,No Payment History,6.0,6.0,,,11.0,,1.0,1.0,24,,9,1,2,55,Good
+77.0,243,,,,,,100.0,Never Had Delinquency,5.0,7.0,,,,No Credit Inquiry,,1.0,36,,8,3,2,69,Good
+79.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,0.0,,,,0.0,No Revolving Burden,No Installment Burden,No Revolving Accounts,1,No Bank Revolving,100,Good
+83.0,,,98.0,53.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,2.0,14,No Installment Burden,,1,0,29,Bad
+63.0,,,,,2.0,,95.0,42,6.0,2.0,,1.0,53.0,,,2.0,57,96,2,9,No Bank Revolving,100,Bad
+85.0,,12.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,0.0,21.0,No Credit Inquiry,,0.0,1,47,2,2,0,44,Good
+60.0,,8.0,74.0,,,,50.0,,4.0,6.0,,,,,,0.0,36,No Installment Burden,,No Installment Loans,1,29,Bad
+43.0,71,,,,,0.0,88.0,,3.0,5.0,8.0,,,,,0.0,No Revolving Burden,,,1,No Bank Revolving,100,Bad
+61.0,,2.0,,,,,100.0,Never Had Delinquency,6.0,8.0,,,,1,,4.0,56,,5,2,0,88,Bad
+60.0,,4.0,,,,2.0,92.0,,4.0,6.0,,1.0,,,,1.0,32,,,3,0,90,Bad
+67.0,110,,,,,,97.0,,4.0,4.0,,1.0,26.0,No Credit Inquiry,,1.0,41,23,,2,2,87,Bad
+70.0,88,16.0,48.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,79,,,1,2,89,Good
+64.0,276,,,,,1.0,96.0,,1.0,3.0,26.0,,,0,2.0,2.0,59,73,,2,1,69,Good
+70.0,,,,33.0,,,97.0,,6.0,2.0,,4.0,,,,3.0,6,,,2,1,41,Bad
+61.0,,,,27.0,,,93.0,9,4.0,6.0,,,76.0,,,1.0,92,33,,5,1,100,Bad
+67.0,,34.0,95.0,,,0.0,94.0,,4.0,6.0,,,,,,0.0,67,No Installment Burden,,1,1,60,Bad
+69.0,,68.0,,,0.0,0.0,83.0,,6.0,6.0,,,,0,,0.0,84,No Installment Burden,,1,1,100,Bad
+82.0,86,,,,,,100.0,Never Had Delinquency,7.0,8.0,10.0,,,,,1.0,16,,2,2,0,50,Bad
+77.0,,,,,,,80.0,,6.0,5.0,5.0,,,No Inquiry Record,,0.0,31,No Installment Burden,1,No Installment Loans,0,50,Good
+84.0,,,,,0.0,0.0,93.0,,6.0,6.0,15.0,,,No Inquiry Record,,0.0,1,,,2,0,57,Good
+59.0,95,8.0,,2.0,1.0,,50.0,,6.0,4.0,,,50.0,No Credit Inquiry,1.0,1.0,104,No Installment Burden,,No Installment Loans,0,100,Bad
+68.0,,,,22.0,,0.0,96.0,,6.0,6.0,,5.0,29.0,No Credit Inquiry,,4.0,55,,,5,2,81,Good
+60.0,,,,,,,67.0,,4.0,2.0,,,,,0.0,0.0,No Revolving Burden,63,No Revolving Accounts,3,No Bank Revolving,100,Bad
+67.0,,,,23.0,,1.0,100.0,Never Had Delinquency,6.0,8.0,24.0,3.0,,No Credit Inquiry,2.0,1.0,82,,,9,1,92,Bad
+57.0,23,,,,2.0,1.0,67.0,,6.0,4.0,,1.0,33.0,,,2.0,92,,,1,No Bank Revolving,67,Bad
+79.0,121,44.0,72.0,11.0,,,91.0,,6.0,6.0,11.0,0.0,,No Credit Inquiry,0.0,0.0,11,No Installment Burden,,1,0,67,Good
+68.0,197,21.0,,,,,55.0,,3.0,5.0,,,,1,,2.0,6,No Installment Burden,1,No Installment Loans,0,17,Bad
+82.0,115,4.0,45.0,16.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,16.0,,63.0,0,,0.0,0,92,,3,0,50,Bad
+83.0,,,,13.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,3.0,3.0,0,,,2,0,33,Good
+81.0,,,,5.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,35.0,,,,,0.0,0,No Installment Burden,0,1,0,33,Bad
+67.0,New to Credit System,,68.0,34.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,5.0,5.0,90,,,4,9,89,Bad
+82.0,,3.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,6,,6,6,0,60,Good
+76.0,87,2.0,,30.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,35.0,,,,,16.0,4,,9,1,0,65,Bad
+73.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,10.0,25,,,4,0,50,Bad
+62.0,,3.0,51.0,20.0,1.0,0.0,78.0,,4.0,5.0,,,,0,,1.0,56,,,3,2,75,Bad
+84.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,2.0,1.0,2,,,2,0,46,Good
+56.0,,5.0,,,,,88.0,,1.0,3.0,,,,,,2.0,41,,,4,2,88,Bad
+84.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,35.0,16,,0.0,6,,1,2,0,38,Good
+82.0,154,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,1.0,12,,,2,0,44,Good
+54.0,,,,,,0.0,88.0,,4.0,6.0,,,,0,,1.0,58,,4,2,3,75,Bad
+65.0,,,,10.0,,,55.0,17,5.0,3.0,,0.0,,,,0.0,49,No Installment Burden,,1,No Bank Revolving,60,Bad
+71.0,194,,,,2.0,,94.0,4,3.0,5.0,,,31.0,No Credit Inquiry,3.0,3.0,10,No Installment Burden,,No Installment Loans,0,50,Bad
+54.0,,,,3.0,,,43.0,,4.0,2.0,,,,0,0.0,0.0,13,,,1,0,67,Bad
+78.0,126,,,,,,100.0,Never Had Delinquency,7.0,8.0,45.0,,,,,2.0,14,,,5,0,50,Good
+58.0,,,,,,,96.0,,6.0,6.0,16.0,3.0,22.0,,3.0,3.0,78,,,2,4,83,Bad
+78.0,,4.0,,,,,100.0,Never Had Delinquency,7.0,8.0,6.0,,67.0,0,,2.0,0,,,2,0,50,Good
+77.0,,9.0,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,23.0,1.0,14.0,No Inquiry Record,,0.0,30,,,1,1,73,Good
+71.0,,,,,1.0,1.0,85.0,,6.0,3.0,,3.0,,,,0.0,80,,,2,1,80,Bad
+70.0,193,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,22.0,,0.0,0.0,53,,,4,1,63,Good
+80.0,,,58.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,0.0,0.0,7,,,2,1,26,Good
+63.0,,,63.0,,,1.0,55.0,20,6.0,4.0,31.0,,20.0,No Credit Inquiry,1.0,1.0,28,,6,2,0,73,Bad
+81.0,598,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,37.0,,22.0,,,1.0,28,,,4,1,50,Bad
+57.0,277,,,,,,93.0,,4.0,6.0,9.0,2.0,,No Credit Inquiry,,0.0,71,,7,2,5,69,Good
+87.0,,,,24.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,17.0,No Inquiry Record,0.0,0.0,0,,,2,0,33,Good
+63.0,95,3.0,,,,,100.0,Never Had Delinquency,6.0,8.0,,,37.0,No Credit Inquiry,,2.0,43,,5,4,1,69,Bad
+69.0,,,,,,,97.0,,6.0,6.0,,0.0,,,,1.0,52,,,6,2,81,Good
+54.0,New to Credit System,,57.0,20.0,1.0,,88.0,,4.0,6.0,,2.0,,9,,0.0,68,79,,6,1,90,Bad
+59.0,9,9.0,,,1.0,1.0,100.0,Never Had Delinquency,7.0,8.0,,,100.0,No Credit Inquiry,,3.0,No Revolving Burden,No Installment Burden,No Revolving Accounts,1,No Bank Revolving,100,Bad
+70.0,,,,19.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,3.0,25.0,0,2.0,2.0,31,42,,2,1,64,Good
+59.0,,,44.0,,1.0,,82.0,,4.0,5.0,,4.0,,,,1.0,43,,,4,0,90,Bad
+60.0,85,14.0,54.0,,3.0,3.0,68.0,,6.0,3.0,,,,2,1.0,1.0,23,,,3,2,50,Bad
+63.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,2.0,100,,,4,4,100,Bad
+72.0,,,84.0,,,,81.0,,6.0,4.0,,,,,,0.0,30,No Installment Burden,,1,0,70,Bad
+79.0,,3.0,51.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,2.0,8,71,,4,1,40,Good
+75.0,242,,,,,,93.0,19,6.0,5.0,30.0,,23.0,No Credit Inquiry,0.0,0.0,14,,2,2,0,50,Bad
+84.0,205,,89.0,,,,100.0,Never Had Delinquency,7.0,8.0,22.0,,45.0,0,,2.0,20,,,2,0,27,Good
+71.0,,,,,,1.0,94.0,,6.0,2.0,,,,No Credit Inquiry,,0.0,70,No Installment Burden,,No Installment Loans,1,75,Good
+80.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,26,,,2,0,60,Good
+72.0,,,,,,,94.0,39,6.0,6.0,,6.0,,0,2.0,2.0,49,71,,3,0,78,Bad
+65.0,521,10.0,,,,,90.0,,4.0,6.0,,,,,0.0,0.0,19,,7,2,0,64,Good
+70.0,,0.0,80.0,,,,97.0,,0.0,2.0,33.0,2.0,,,1.0,1.0,55,,,3,1,86,Bad
+66.0,,,,19.0,,,77.0,8,1.0,3.0,,,,8,,0.0,4,5,,2,0,50,Good
+90.0,,4.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,,1.0,1,,,2,0,57,Good
+65.0,,8.0,,8.0,,,88.0,,6.0,6.0,8.0,,,,,2.0,91,No Installment Burden,,1,2,75,Good
+69.0,41,,27.0,,,,75.0,,6.0,2.0,,1.0,,No Credit Inquiry,,0.0,24,No Installment Burden,,No Installment Loans,No Bank Revolving,100,Bad
+54.0,,,,,0.0,,88.0,,4.0,6.0,,,25.0,,,1.0,68,No Installment Burden,,No Installment Loans,3,100,Bad
+70.0,,,,,,,96.0,14,6.0,6.0,,,,,,3.0,34,,,4,0,82,Good
+78.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,No Revolving Burden,No Installment Burden,No Revolving Accounts,1,No Bank Revolving,100,Bad
+68.0,,,73.0,31.0,0.0,,97.0,,6.0,6.0,31.0,,,,,4.0,26,,5,3,1,67,Bad
+73.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,40,,,3,1,68,Bad
+65.0,,,,,,,92.0,,4.0,6.0,,,,,,0.0,33,,2,3,1,50,Bad
+74.0,352,,129.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,71,,6,2,4,73,Bad
+60.0,288,,,,,,77.0,,4.0,5.0,,,,,,1.0,27,,,2,2,73,Bad
+55.0,248,,,,,,86.0,,0.0,5.0,,,,0,,2.0,8,,1,2,0,75,Good
+73.0,,5.0,76.0,5.0,,,75.0,,6.0,4.0,,,,,,2.0,0,,0,2,No Bank Revolving,67,Good
+82.0,,6.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,5,0.0,0.0,6,No Installment Burden,,1,0,64,Good
+72.0,,,,,,,92.0,,6.0,6.0,25.0,,40.0,0,,3.0,25,,,3,1,50,Good
+68.0,,,,20.0,0.0,,91.0,,4.0,6.0,,0.0,65.0,0,1.0,1.0,0,,,6,No Bank Revolving,86,Bad
+77.0,,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,6.0,20,,,2,0,80,Good
+69.0,,,,,0.0,,67.0,12,6.0,6.0,,,,0,,2.0,0,76,,2,No Bank Revolving,50,Bad
+70.0,,7.0,,,,,93.0,,6.0,6.0,,,,0,,1.0,43,No Installment Burden,6,2,3,53,Bad
+56.0,,,65.0,,,,80.0,,4.0,5.0,41.0,,,0,,1.0,64,,,2,2,69,Bad
+65.0,,,97.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,34.0,,18.0,,,8.0,70,No Installment Burden,,1,8,67,Bad
+63.0,,6.0,,,,0.0,90.0,25,6.0,5.0,,,,,,2.0,70,No Installment Burden,,2,5,72,Bad
+86.0,,,,26.0,,,100.0,Never Had Delinquency,7.0,8.0,26.0,,,,0.0,0.0,0,13,1,2,0,43,Good
+90.0,,,,37.0,,,100.0,Never Had Delinquency,7.0,8.0,,,3.0,,,0.0,1,No Installment Burden,,1,0,15,Good
+66.0,91,,,,,,75.0,,6.0,6.0,,,,,,3.0,No Revolving Burden,No Installment Burden,No Revolving Accounts,2,No Bank Revolving,100,Bad
+62.0,80,,,24.0,,,96.0,59,6.0,6.0,25.0,1.0,48.0,,,0.0,73,113,,5,2,91,Bad
+79.0,192,8.0,,,0.0,,94.0,,4.0,6.0,32.0,,50.0,No Credit Inquiry,,0.0,3,No Installment Burden,,1,0,50,Good
+87.0,,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,35.0,No Credit Inquiry,0.0,0.0,0,,1,1,0,29,Good
+72.0,119,1.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,,40.0,,,0.0,37,No Installment Burden,9,2,0,85,Bad
+66.0,,8.0,,19.0,,1.0,84.0,,6.0,6.0,20.0,1.0,,,,2.0,35,17,,3,1,57,Bad
+61.0,,,36.0,,,,83.0,,4.0,6.0,,2.0,,,,0.0,69,,,2,1,100,Good
+71.0,77,2.0,,12.0,,,92.0,24,6.0,6.0,,,,0,1.0,1.0,63,,3,1,1,80,Bad
+80.0,,3.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,6,,0.0,27,,,2,0,50,Bad
+72.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,31.0,No Inquiry Record,,0.0,39,,4,6,2,67,Good
+86.0,206,,,15.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,47.0,No Credit Inquiry,,0.0,5,No Installment Burden,2,1,0,50,Bad
+80.0,,,53.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,1.0,75.0,No Inquiry Record,0.0,0.0,42,,,3,0,83,Good
+71.0,162,,51.0,,,,92.0,,6.0,6.0,13.0,,,0,0.0,0.0,51,No Installment Burden,,1,1,50,Bad
+72.0,,0.0,48.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,34.0,7.0,,0,,12.0,45,,6,6,2,60,Bad
+73.0,,,,,0.0,,100.0,Never Had Delinquency,6.0,8.0,34.0,4.0,35.0,,,2.0,35,64,,2,1,92,Good
+70.0,,,48.0,,0.0,,95.0,61,6.0,6.0,,,,No Credit Inquiry,,5.0,72,50,,3,1,86,Bad
+58.0,,4.0,,,,2.0,88.0,,6.0,4.0,,,,,,1.0,No Revolving Burden,,No Revolving Accounts,4,No Bank Revolving,100,Bad
+88.0,,7.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,23,,0.0,18,89,,2,0,60,Good
+78.0,,,,,,,90.0,13,6.0,6.0,20.0,,,,,1.0,9,No Installment Burden,,1,0,64,Good
+85.0,181,,77.0,,,,100.0,Never Had Delinquency,7.0,8.0,,1.0,,,0.0,0.0,0,,0,2,0,50,Good
+73.0,190,,,22.0,,0.0,96.0,,6.0,6.0,,,,No Inquiry Record,1.0,1.0,36,No Installment Burden,,2,2,60,Good
+83.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,1.0,No Revolving Burden,,,1,No Bank Revolving,100,Good
+68.0,,,,,,,89.0,,4.0,6.0,,,,0,,2.0,8,,3,5,0,100,Good
+61.0,,,,,,0.0,97.0,,6.0,6.0,41.0,,,,3.0,3.0,30,No Installment Burden,,4,1,60,Good
+62.0,106,,,,,,95.0,,4.0,6.0,21.0,,,,,6.0,62,,3,4,1,78,Bad
+66.0,,17.0,,,,,92.0,,4.0,6.0,38.0,,,No Credit Inquiry,,0.0,60,No Installment Burden,,1,1,36,Bad
+76.0,172,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,0.0,51,No Installment Burden,2,2,2,50,Good
+80.0,162,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,58.0,,,0.0,79,,,2,No Bank Revolving,80,Good
+63.0,,,,,,2.0,93.0,,6.0,4.0,,,,0,,3.0,33,No Installment Burden,,2,3,50,Bad
+61.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,28.0,,2.0,2.0,36,,,6,2,54,Bad
+91.0,,20.0,84.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,15.0,,,No Credit Inquiry,,0.0,0,51,0,2,0,50,Good
+65.0,,,47.0,23.0,,,96.0,No Payment History,6.0,6.0,,0.0,,0,1.0,1.0,61,,,3,2,75,Bad
+74.0,155,,,,0.0,,98.0,,6.0,6.0,,,,,,1.0,63,,,2,1,67,Good
+65.0,,,,,1.0,,98.0,,3.0,5.0,,,,,,2.0,93,,,2,2,60,Good
+87.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,1.0,,23,0.0,0.0,13,,,2,0,80,Good
+72.0,,,,23.0,1.0,,92.0,,6.0,5.0,,0.0,,,,7.0,45,,,4,0,60,Good
+56.0,247,,76.0,,,,67.0,,3.0,5.0,21.0,2.0,,0,,2.0,64,,6,10,2,100,Bad
+57.0,,,,31.0,2.0,,76.0,,6.0,5.0,,,,,0.0,0.0,73,79,,2,3,70,Bad
+71.0,,,,52.0,,,93.0,,6.0,5.0,55.0,,49.0,0,,0.0,22,,,6,1,67,Good
+83.0,,,66.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,0.0,37,,3,2,0,45,Bad
+87.0,,,198.0,,,,100.0,Never Had Delinquency,7.0,8.0,,0.0,0.0,0,0.0,0.0,13,No Installment Burden,,No Installment Loans,0,25,Good
+67.0,,,,,,,86.0,,4.0,6.0,22.0,0.0,,,,2.0,11,,2,3,1,100,Good
+69.0,New to Credit System,,,26.0,,,100.0,Never Had Delinquency,7.0,8.0,28.0,,,No Credit Inquiry,,5.0,43,,,2,2,64,Good
+61.0,,,,,2.0,,89.0,,3.0,5.0,,,20.0,No Credit Inquiry,0.0,0.0,35,,,3,0,82,Good
+66.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,49.0,3.0,29.0,,4.0,4.0,63,64,16,4,6,80,Good
+85.0,,2.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,1.0,,2,,1.0,6,No Installment Burden,6,No Installment Loans,0,75,Good
+61.0,,,70.0,,1.0,,78.0,,5.0,6.0,,,,,9.0,9.0,22,65,,2,0,63,Bad
+69.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,0.0,86,No Installment Burden,5,1,3,100,Bad
+90.0,178,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,No Inquiry Record,0.0,0.0,51,No Installment Burden,2,No Installment Loans,1,29,Good
+90.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,14.0,,29.0,,,0.0,15,,,2,0,38,Good
+84.0,,,,,,0.0,100.0,Never Had Delinquency,5.0,7.0,39.0,,5.0,No Credit Inquiry,1.0,1.0,3,No Installment Burden,,1,0,26,Bad
+72.0,,9.0,69.0,28.0,,,92.0,,6.0,5.0,,,,,,2.0,18,66,,5,No Bank Revolving,88,Bad
+54.0,424,,147.0,7.0,4.0,,73.0,,6.0,2.0,,,,,,4.0,61,,6,2,1,89,Bad
+71.0,94,,54.0,,1.0,,56.0,26,6.0,5.0,,,,No Credit Inquiry,,1.0,0,,,2,0,33,Bad
+65.0,,,,,,,66.0,,6.0,5.0,,,,,3.0,3.0,45,,,2,1,71,Bad
+77.0,193,,43.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,0.0,45,,,1,0,86,Good
+67.0,,,,28.0,1.0,0.0,88.0,,6.0,5.0,,,,0,,0.0,60,,,5,2,77,Good
+56.0,,,,,,,67.0,4,0.0,2.0,,0.0,,0,1.0,1.0,0,,,2,0,100,Bad
+66.0,48,3.0,19.0,11.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,1.0,39,,7,2,1,90,Bad
+70.0,,6.0,59.0,,,,87.0,1,4.0,6.0,15.0,,,,,1.0,3,No Installment Burden,1,1,0,33,Bad
+79.0,,,77.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,29.0,,,0.0,43,No Installment Burden,4,2,2,55,Bad
+73.0,,,,,,0.0,98.0,,4.0,6.0,,,,,4.0,4.0,12,No Installment Burden,4,2,0,44,Good
+72.0,,2.0,95.0,41.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,42,No Installment Burden,,2,2,82,Bad
+70.0,,,,14.0,,0.0,86.0,6,4.0,6.0,14.0,1.0,7.0,,,0.0,24,No Installment Burden,,1,1,67,Bad
+69.0,303,,104.0,,0.0,,94.0,,6.0,6.0,,,,No Credit Inquiry,0.0,0.0,45,,7,4,3,61,Good
+73.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,0.0,,,3.0,3.0,59,,6,1,2,78,Bad
+57.0,,,,13.0,3.0,,75.0,,0.0,2.0,,,,No Credit Inquiry,1.0,1.0,95,,,2,1,100,Bad
+79.0,190,16.0,,15.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,1.0,35,,,2,1,75,Good
+58.0,29,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,0.0,0,,12.0,27,No Installment Burden,,No Installment Loans,3,57,Bad
+69.0,,3.0,,,,,91.0,70,6.0,2.0,,,,No Credit Inquiry,4.0,4.0,27,,,1,1,45,Good
+68.0,184,,,,,,80.0,,4.0,6.0,,0.0,40.0,,0.0,0.0,13,,,3,1,50,Bad
+85.0,,6.0,,25.0,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,0,,0.0,10,,,2,0,50,Good
+65.0,,,,,,,93.0,,4.0,6.0,,,,,,1.0,54,,9,1,4,77,Bad
+81.0,,5.0,58.0,,,,100.0,Never Had Delinquency,7.0,8.0,7.0,,,,,1.0,31,81,1,2,1,50,Bad
+73.0,,,60.0,,0.0,0.0,94.0,15,6.0,6.0,,,44.0,No Credit Inquiry,,0.0,72,94,,2,0,100,Bad
+86.0,,3.0,131.0,,,,100.0,Never Had Delinquency,7.0,8.0,21.0,,,,,4.0,2,No Installment Burden,,No Installment Loans,0,40,Good
+73.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,0.0,,No Credit Inquiry,,3.0,62,,,2,2,83,Good
+70.0,,,72.0,45.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,3.0,33,,,2,1,85,Good
+70.0,,,,,0.0,,95.0,,5.0,6.0,20.0,,30.0,0,,0.0,74,,,4,3,86,Bad
+64.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,6.0,58.0,No Credit Inquiry,,0.0,100,,5,4,1,100,Bad
+69.0,,4.0,,,1.0,,92.0,,6.0,4.0,,3.0,,,,6.0,45,62,,2,1,70,Good
+51.0,,6.0,,13.0,,,69.0,,0.0,2.0,,,38.0,,,0.0,94,,2,3,1,83,Bad
+74.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,37.0,1.0,25.0,No Credit Inquiry,,2.0,52,,6,2,1,73,Good
+91.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,15.0,,,,,0.0,1,No Installment Burden,,No Installment Loans,0,29,Bad
+85.0,,,,15.0,,,100.0,Never Had Delinquency,7.0,8.0,,,24.0,,,5.0,3,No Installment Burden,,1,0,50,Bad
+77.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,,1.0,1.0,20,,,4,3,50,Bad
+68.0,,,,,7.0,,50.0,,6.0,4.0,,,,0,,2.0,27,No Installment Burden,,2,1,50,Bad
+72.0,,,100.0,,,1.0,85.0,,2.0,4.0,,,,,,0.0,33,No Installment Burden,,2,1,31,Bad
+70.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,0.0,90,,,2,1,86,Bad
+72.0,,,49.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,11.0,,,No Credit Inquiry,,0.0,55,No Installment Burden,5,1,2,86,Good
+68.0,298,4.0,86.0,19.0,,,89.0,,6.0,6.0,22.0,2.0,,,1.0,1.0,6,,2,3,0,63,Good
+73.0,,,,26.0,0.0,0.0,96.0,,4.0,6.0,,,27.0,,2.0,2.0,18,69,,3,1,45,Good
+72.0,,,,20.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,21.0,,14.0,,,0.0,83,,,2,5,80,Bad
+67.0,234,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,12.0,,1.0,1.0,79,24,23,4,11,87,Bad
+88.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,22.0,0.0,27.0,,,0.0,5,No Installment Burden,,1,0,50,Bad
+84.0,,,,,0.0,0.0,96.0,,6.0,6.0,,,,3,2.0,2.0,0,84,,3,0,57,Good
+64.0,,7.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,4.0,3.0,76,,,3,1,100,Bad
+59.0,,4.0,,7.0,,,63.0,,4.0,6.0,,2.0,25.0,,,1.0,72,,4,2,1,86,Bad
+71.0,80,6.0,45.0,,,,100.0,Never Had Delinquency,7.0,8.0,,1.0,33.0,0,,0.0,43,96,,3,1,46,Bad
+78.0,175,6.0,75.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,47.0,,,0.0,32,No Installment Burden,2,1,0,75,Bad
+76.0,,,7.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,3.0,,0,,1.0,0,No Installment Burden,,1,No Bank Revolving,50,Bad
+83.0,,6.0,,,,,95.0,18,6.0,5.0,68.0,,,6,,0.0,4,,,3,0,31,Good
+70.0,162,5.0,82.0,,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,45.0,No Credit Inquiry,3.0,3.0,60,,,1,2,67,Bad
+92.0,,,122.0,11.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,1,No Installment Burden,,1,0,60,Good
+64.0,162,,,,,,100.0,Never Had Delinquency,7.0,8.0,15.0,,,2,,1.0,63,,,3,4,100,Good
+86.0,194,,,17.0,,0.0,94.0,,6.0,6.0,,,,0,,1.0,22,No Installment Burden,3,1,0,40,Bad
+88.0,,,,24.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,25.0,,,,,0.0,2,,,2,0,45,Good
+77.0,,12.0,32.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,0.0,33.0,No Credit Inquiry,2.0,1.0,25,No Installment Burden,,No Installment Loans,0,100,Bad
+89.0,468,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,No Inquiry Record,,0.0,4,No Installment Burden,1,1,0,33,Good
+60.0,,,,,0.0,,88.0,,4.0,6.0,,5.0,,No Credit Inquiry,4.0,4.0,32,,,3,0,80,Bad
+75.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,0,1.0,1.0,55,,,2,1,89,Bad
+93.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,2,,1.0,0,No Installment Burden,,No Installment Loans,0,0,Bad
+84.0,,,,27.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,3.0,7,,,2,1,55,Good
+52.0,216,,63.0,,1.0,,88.0,,4.0,6.0,17.0,4.0,29.0,1,,4.0,78,No Installment Burden,6,1,4,70,Bad
+87.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,3.0,0,,,2,0,33,Good
+33.0,243,,,,6.0,,50.0,,3.0,3.0,20.0,0.0,,,2.0,2.0,51,,,4,No Bank Revolving,100,Good
+47.0,,,,,,2.0,70.0,,0.0,2.0,30.0,0.0,,No Credit Inquiry,,2.0,94,,6,2,2,80,Bad
+87.0,,3.0,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,,6.0,7,68,,2,0,44,Bad
+80.0,381,,,35.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,38,,2,2,0,57,Good
+72.0,,3.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,10.0,26,87,1,1,0,100,Bad
+74.0,,1.0,,,,,89.0,13,6.0,6.0,,,,,,3.0,12,,2,2,1,40,Bad
+67.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,4.0,1.0,50.0,,,8.0,100,No Installment Burden,,1,No Bank Revolving,100,Bad
+73.0,305,,,29.0,,0.0,97.0,,4.0,6.0,,,,,,0.0,19,,,3,0,53,Good
+69.0,,,,,1.0,0.0,78.0,,6.0,5.0,,,,No Credit Inquiry,1.0,1.0,48,,,2,1,86,Good
+65.0,186,,,,,,96.0,,6.0,6.0,,,48.0,No Credit Inquiry,,7.0,55,,,4,1,92,Bad
+73.0,,,,,,,95.0,40,6.0,6.0,19.0,,,,,2.0,29,,4,3,2,88,Bad
+86.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,0.0,0.0,2,No Installment Burden,,2,0,21,Good
+83.0,83,,80.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,30,43,,1,0,75,Good
+69.0,,,,,,,73.0,,3.0,5.0,,,27.0,,,9.0,7,No Installment Burden,,1,0,60,Bad
+56.0,,5.0,,18.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,18.0,,,,,3.0,51,93,,4,3,82,Bad
+88.0,413,,,48.0,,,100.0,Never Had Delinquency,7.0,8.0,,,29.0,,,1.0,1,,1,1,0,13,Good
+75.0,,,130.0,,,,93.0,78,6.0,6.0,,1.0,,,,5.0,39,97,,4,0,64,Good
+84.0,,,,8.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,2.0,1.0,10,,,3,0,67,Good
+80.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,3,,,2,1,32,Good
+80.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,34.0,,,No Credit Inquiry,,0.0,8,No Installment Burden,,No Installment Loans,1,24,Good
+79.0,,,,,,,86.0,,4.0,6.0,,3.0,,6,,0.0,0,No Installment Burden,,1,0,33,Good
+68.0,,,110.0,,,1.0,86.0,,5.0,2.0,22.0,1.0,,,,0.0,95,,,2,1,100,Good
+68.0,,4.0,,,,,100.0,Never Had Delinquency,6.0,8.0,,,,No Credit Inquiry,,2.0,18,,,1,0,71,Bad
+82.0,,43.0,96.0,,,,100.0,Never Had Delinquency,7.0,8.0,,0.0,65.0,No Credit Inquiry,,0.0,45,71,4,1,0,83,Good
+63.0,173,,37.0,,,,94.0,,6.0,6.0,18.0,,22.0,No Credit Inquiry,0.0,0.0,54,,,2,4,79,Bad
+91.0,,27.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,,20.0,,1.0,1.0,2,No Installment Burden,1,1,0,40,Good
+87.0,,5.0,,29.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,2,,,3,0,31,Good
+89.0,,,94.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,0.0,27.0,,,1.0,8,,,1,0,25,Bad
+83.0,147,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,5,86,,3,0,60,Good
+81.0,,,105.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,2.0,52,,,4,1,70,Bad
+61.0,,,,,3.0,,44.0,16,6.0,2.0,,,,No Credit Inquiry,,0.0,73,No Installment Burden,,1,1,75,Bad
+64.0,175,6.0,,29.0,,9.0,63.0,,4.0,4.0,,,,0,,1.0,16,,,1,No Bank Revolving,50,Bad
+63.0,155,12.0,,15.0,,,94.0,Never Had Delinquency,5.0,7.0,16.0,0.0,,,,5.0,93,,,2,4,78,Good
+79.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,27.0,1.0,,No Credit Inquiry,,3.0,25,,,2,1,38,Good
+69.0,,7.0,,,,0.0,98.0,,6.0,6.0,,,,,,1.0,47,,,3,2,67,Bad
+77.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,18.0,3.0,39.0,4,,2.0,24,No Installment Burden,4,1,0,71,Good
+82.0,,,49.0,,,,100.0,Never Had Delinquency,7.0,8.0,23.0,,30.0,,,2.0,0,,0,3,No Bank Revolving,38,Good
+79.0,298,,,,,,90.0,18,6.0,6.0,,,,7,0.0,0.0,14,18,,2,0,64,Bad
+89.0,,1.0,96.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,1.0,1.0,18,,,3,0,71,Good
+75.0,247,,,,,,87.0,,6.0,6.0,,,,No Credit Inquiry,2.0,2.0,8,,,2,1,40,Bad
+69.0,,,,,,,71.0,,6.0,4.0,2.0,2.0,86.0,No Inquiry Record,,0.0,No Revolving Burden,88,No Revolving Accounts,2,No Bank Revolving,100,Good
+64.0,242,,,,,,47.0,,4.0,5.0,,,,0,,4.0,27,No Installment Burden,,3,0,100,Bad
+77.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,7.0,,,,1.0,14,,,3,0,57,Good
+83.0,440,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,0.0,,,,0.0,33,,,2,1,50,Good
+86.0,,,,26.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,0.0,0.0,8,,7,2,0,63,Good
+58.0,100,,62.0,33.0,,,94.0,,4.0,6.0,,0.0,,1,,3.0,44,,,3,2,73,Bad
+66.0,,,75.0,38.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,40.0,No Credit Inquiry,,6.0,77,,,8,3,75,Good
+87.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,2.0,1,,,2,0,55,Good
+88.0,,20.0,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,57.0,No Credit Inquiry,0.0,0.0,0,19,,3,0,71,Good
+63.0,,1.0,,,0.0,0.0,83.0,,4.0,6.0,,,67.0,,,1.0,No Revolving Burden,,,2,1,100,Bad
+77.0,170,,,,,,100.0,Never Had Delinquency,7.0,8.0,26.0,1.0,,No Credit Inquiry,2.0,2.0,58,46,,1,2,50,Good
+54.0,,,,,,,76.0,,4.0,4.0,,,,0,0.0,0.0,31,No Installment Burden,,1,1,63,Bad
+56.0,369,,93.0,,1.0,0.0,83.0,0,4.0,5.0,,,,No Credit Inquiry,,0.0,88,,,4,3,93,Good
+58.0,,,,24.0,,1.0,80.0,,4.0,2.0,,,24.0,,1.0,1.0,0,48,0,3,0,33,Bad
+59.0,,,,35.0,0.0,,97.0,9,4.0,6.0,,,,No Credit Inquiry,,2.0,73,No Installment Burden,,1,9,86,Bad
+65.0,125,,,,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,1.0,45,93,,1,4,61,Bad
+58.0,,,,23.0,,,70.0,,4.0,6.0,,,,,,1.0,53,,,3,2,77,Bad
+84.0,,,121.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,15.0,,,,,2.0,26,No Installment Burden,,1,0,56,Good
+78.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,8.0,,38.0,No Credit Inquiry,1.0,1.0,53,,2,2,0,80,Good
+79.0,,5.0,,38.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,42.0,,,,,1.0,55,No Installment Burden,,2,1,71,Bad
+87.0,205,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,18.0,,56.0,No Credit Inquiry,,0.0,5,,,2,0,67,Good
+76.0,331,18.0,,,0.0,,95.0,,6.0,6.0,,,10.0,0,,3.0,14,No Installment Burden,,No Installment Loans,1,36,Bad
+76.0,,4.0,,,0.0,0.0,95.0,61,6.0,6.0,22.0,1.0,,,,0.0,93,80,1,2,No Bank Revolving,100,Good
+75.0,,,,,,,84.0,3,4.0,6.0,,,,No Inquiry Record,,0.0,7,No Installment Burden,,No Installment Loans,0,45,Good
+85.0,275,2.0,,15.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,17.0,1.0,,1,1.0,1.0,5,No Installment Burden,,No Installment Loans,1,25,Good
+69.0,168,,,17.0,0.0,,89.0,,4.0,6.0,10.0,,,No Credit Inquiry,,2.0,34,,,5,1,80,Bad
+64.0,,2.0,,,,2.0,85.0,72,5.0,3.0,,,,,,6.0,60,,2,5,1,78,Bad
+58.0,,,102.0,45.0,,0.0,85.0,,4.0,6.0,46.0,3.0,24.0,,,0.0,65,,14,3,5,75,Bad
+83.0,,,,,,,98.0,66,6.0,5.0,,,,No Inquiry Record,,0.0,9,No Installment Burden,3,1,0,36,Good
+75.0,129,3.0,,,0.0,,96.0,,6.0,6.0,23.0,,,No Credit Inquiry,,1.0,47,,,2,0,71,Good
+59.0,207,,56.0,,0.0,0.0,81.0,,4.0,6.0,,,69.0,,,1.0,32,79,,2,1,80,Bad
+88.0,,13.0,,23.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,24.0,,,,2.0,2.0,2,No Installment Burden,2,1,0,38,Good
+78.0,,5.0,165.0,,,,89.0,,6.0,6.0,,,,,,1.0,30,No Installment Burden,4,No Installment Loans,No Bank Revolving,67,Good
+82.0,,,,18.0,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,1.0,1.0,19,,,2,1,88,Good
+87.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,45.0,,,3,1.0,1.0,3,No Installment Burden,,No Installment Loans,0,43,Good
+72.0,,,,15.0,0.0,0.0,87.0,25,6.0,6.0,16.0,,,,2.0,2.0,33,No Installment Burden,,No Installment Loans,0,67,Good
+77.0,,,,,,,90.0,,6.0,5.0,,0.0,60.0,,,1.0,32,,1,3,1,67,Good
+59.0,,6.0,,,5.0,,100.0,Never Had Delinquency,0.0,8.0,27.0,2.0,44.0,,,4.0,49,,,4,2,71,Bad
+76.0,,,83.0,,,0.0,96.0,,4.0,6.0,,4.0,28.0,No Credit Inquiry,,2.0,12,No Installment Burden,,No Installment Loans,0,44,Good
+87.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,32.0,,2.0,2.0,7,No Installment Burden,,3,0,67,Good
+69.0,,,,,,0.0,96.0,,6.0,5.0,27.0,5.0,,,,1.0,61,No Installment Burden,,1,1,67,Bad
+77.0,,,,,,0.0,93.0,No Payment History,6.0,5.0,,,,0,,3.0,14,No Installment Burden,9,1,1,77,Bad
+66.0,128,,,,,,89.0,,0.0,3.0,,1.0,,,,4.0,13,88,4,2,0,100,Bad
+72.0,,,,,1.0,1.0,92.0,,6.0,2.0,32.0,,31.0,No Credit Inquiry,,1.0,5,No Installment Burden,,1,0,33,Good
+65.0,53,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,3.0,51,57,,3,1,89,Good
+75.0,141,,83.0,,0.0,,94.0,,6.0,6.0,,,,,,2.0,36,,,3,1,54,Good
+87.0,New to Credit System,,102.0,11.0,,,100.0,Never Had Delinquency,7.0,8.0,,0.0,,No Credit Inquiry,0.0,0.0,47,,,1,0,50,Bad
+56.0,,,63.0,,,,86.0,5,4.0,6.0,35.0,,,0,,7.0,48,,,3,3,62,Bad
+58.0,,,21.0,,,,100.0,Never Had Delinquency,7.0,8.0,12.0,,33.0,,,3.0,93,96,,1,2,75,Bad
+56.0,,,15.0,9.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,2.0,100,,2,5,2,100,Bad
+56.0,,,,,,,88.0,,4.0,3.0,,,,,,11.0,9,96,1,3,1,33,Bad
+57.0,225,,,,,,71.0,,3.0,2.0,,,36.0,No Credit Inquiry,0.0,0.0,94,,,3,No Bank Revolving,90,Bad
+56.0,,,93.0,,,,94.0,,4.0,6.0,,0.0,39.0,,,2.0,85,,16,6,11,96,Bad
+78.0,199,,70.0,,,,97.0,,6.0,3.0,34.0,2.0,24.0,0,0.0,0.0,8,No Installment Burden,,2,0,25,Bad
+79.0,,8.0,,30.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,13.0,,,1.0,11,,8,2,1,53,Bad
+82.0,187,,,,,,96.0,32,6.0,6.0,28.0,,50.0,,2.0,2.0,4,59,3,2,0,56,Good
+84.0,541,14.0,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,0.0,0,No Installment Burden,1,1,0,29,Good
+56.0,New to Credit System,4.0,,36.0,,,95.0,,6.0,3.0,40.0,,,No Credit Inquiry,,0.0,51,No Installment Burden,5,1,3,67,Good
+72.0,New to Credit System,,,,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,27.0,No Credit Inquiry,,1.0,22,,,3,1,53,Bad
+81.0,,3.0,80.0,,,,98.0,,6.0,6.0,,,,,,0.0,3,,3,3,0,25,Good
+86.0,New to Credit System,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,0.0,0.0,13,No Installment Burden,,1,0,43,Good
+63.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,59.0,No Credit Inquiry,1.0,1.0,101,90,6,6,4,100,Bad
+80.0,,6.0,,19.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,19.0,,,5,,0.0,3,,2,2,1,44,Good
+64.0,,,,,,,100.0,Never Had Delinquency,6.0,8.0,,,12.0,,,6.0,53,No Installment Burden,,1,4,75,Bad
+63.0,,,,,2.0,,88.0,,6.0,2.0,8.0,,,,,1.0,43,,3,2,0,100,Bad
+78.0,,,,30.0,,,94.0,,6.0,5.0,32.0,,,,,3.0,6,No Installment Burden,,3,0,70,Bad
+64.0,174,,,,,1.0,89.0,,4.0,6.0,,,,,,0.0,6,,,2,0,33,Bad
+66.0,,,,29.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,34.0,,,1,3.0,3.0,41,91,,7,2,79,Bad
+57.0,86,,,,,,90.0,23,6.0,6.0,,,,,,3.0,53,,,3,2,76,Bad
+84.0,,,85.0,26.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,8,,,2,0,36,Good
+87.0,327,,,,,,96.0,Never Had Delinquency,5.0,7.0,,,,,,0.0,9,No Installment Burden,,1,0,60,Good
+65.0,,,,,1.0,,78.0,,6.0,2.0,5.0,,,No Credit Inquiry,,0.0,85,No Installment Burden,2,No Installment Loans,1,100,Good
+79.0,,,,,0.0,0.0,92.0,,6.0,6.0,,,77.0,,,2.0,0,No Installment Burden,,1,0,50,Good
+75.0,,1.0,,7.0,,,88.0,No Payment History,6.0,6.0,,,,,0.0,0.0,18,,,2,2,57,Good
+73.0,,,,9.0,,,100.0,Never Had Delinquency,7.0,8.0,9.0,2.0,,,,0.0,28,,,2,0,100,Bad
+79.0,,,,,,,100.0,Never Had Delinquency,6.0,7.0,,,,0,,2.0,40,,,3,1,44,Good
+61.0,,8.0,,,,,55.0,,4.0,2.0,32.0,,36.0,No Credit Inquiry,,1.0,78,No Installment Burden,,1,1,71,Bad
+73.0,,15.0,,,1.0,,95.0,17,6.0,4.0,,,,10,,0.0,38,No Installment Burden,,1,0,43,Good
+71.0,250,,,,,,73.0,,6.0,3.0,,,,0,,2.0,29,,2,3,0,83,Bad
+57.0,,,,,,,84.0,,6.0,6.0,,,,,3.0,3.0,82,73,4,4,3,73,Bad
+77.0,,7.0,85.0,26.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,0.0,0.0,16,,4,4,0,59,Bad
+80.0,,,,38.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,4.0,,3,,3.0,0,No Installment Burden,,2,0,43,Good
+88.0,,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,2.0,,No Credit Inquiry,0.0,0.0,0,No Installment Burden,,2,0,44,Good
+87.0,,3.0,93.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,4,,,2,0,47,Good
+69.0,,,35.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,6.0,,2,,4.0,43,No Installment Burden,,3,3,60,Good
+51.0,,,,8.0,5.0,,54.0,,1.0,3.0,,0.0,,No Credit Inquiry,,1.0,95,,3,2,2,100,Bad
+68.0,,7.0,,,,1.0,96.0,3,1.0,3.0,,,,,,1.0,9,,5,2,0,70,Bad
+66.0,,,156.0,42.0,,,80.0,,5.0,4.0,,,,No Credit Inquiry,1.0,1.0,36,61,,4,2,48,Bad
+77.0,,,,,,,92.0,,6.0,6.0,,,12.0,,,0.0,9,100,7,2,0,63,Good
+41.0,,,,,4.0,,74.0,,3.0,5.0,39.0,,,,,1.0,70,32,,4,7,88,Bad
+69.0,105,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,32,,,1,2,64,Bad
+74.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,32.0,No Credit Inquiry,,0.0,61,84,6,3,4,75,Bad
+71.0,,,,,,,98.0,8,4.0,6.0,62.0,,,,,5.0,7,No Installment Burden,5,1,0,40,Good
+78.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,1.0,0,No Installment Burden,,2,0,20,Good
+82.0,240,,,,,,92.0,,6.0,6.0,,,,No Credit Inquiry,,1.0,9,,2,2,0,50,Good
+57.0,,,106.0,,,,68.0,,4.0,6.0,,,,0,2.0,2.0,63,62,6,3,1,82,Bad
+73.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,38.0,,,,,1.0,47,,,2,3,59,Good
+54.0,375,,,44.0,,0.0,84.0,1,4.0,6.0,44.0,,,,2.0,2.0,72,,,4,4,64,Bad
+82.0,234,,,54.0,,,100.0,Never Had Delinquency,7.0,8.0,,,,,2.0,2.0,5,,5,1,1,32,Good
+62.0,New to Credit System,6.0,,18.0,,1.0,95.0,,0.0,6.0,,,,,,2.0,3,No Installment Burden,4,1,0,50,Bad
+69.0,,,,24.0,,0.0,96.0,,6.0,6.0,26.0,3.0,,7,,0.0,45,,12,4,1,84,Bad
+79.0,200,10.0,,,,,100.0,Never Had Delinquency,7.0,8.0,40.0,1.0,30.0,0,1.0,1.0,35,,,2,1,36,Good
+72.0,,,,,,,83.0,,4.0,6.0,,3.0,24.0,2,2.0,2.0,6,,2,2,0,33,Good
+64.0,,15.0,,,,,94.0,3,0.0,2.0,33.0,,,0,,0.0,86,No Installment Burden,,1,2,91,Bad
+76.0,368,6.0,,,,,100.0,Never Had Delinquency,7.0,8.0,32.0,,,,,0.0,21,50,8,2,2,65,Good
+85.0,203,,59.0,15.0,,,100.0,Never Had Delinquency,7.0,8.0,,2.0,,,,1.0,0,,,2,0,30,Good
+81.0,261,,94.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,22.0,2.0,,,,1.0,67,,,3,0,100,Good
+67.0,51,,,9.0,,0.0,80.0,,4.0,6.0,,,50.0,,,2.0,0,,,1,0,50,Bad
+85.0,,,84.0,,0.0,,100.0,Never Had Delinquency,6.0,7.0,19.0,,,No Credit Inquiry,0.0,0.0,9,,,2,0,62,Bad
+75.0,,,,,0.0,,97.0,,6.0,6.0,,,,,,0.0,17,No Installment Burden,6,1,0,70,Good
+81.0,136,,63.0,19.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,No Credit Inquiry,,0.0,42,,1,2,0,60,Good
+89.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,18.0,,,No Inquiry Record,,0.0,6,31,,2,0,55,Good
+79.0,New to Credit System,10.0,83.0,19.0,,,95.0,,6.0,3.0,,,48.0,,,0.0,4,65,2,3,0,83,Good
+65.0,,,,,0.0,,85.0,18,6.0,6.0,20.0,3.0,,0,,0.0,55,92,,2,2,67,Bad
+52.0,169,,,32.0,,,84.0,5,4.0,6.0,,,,,3.0,3.0,92,No Installment Burden,7,2,3,83,Bad
+58.0,,4.0,,,,,95.0,23,6.0,6.0,,,,No Credit Inquiry,,2.0,87,No Installment Burden,,1,5,80,Good
+68.0,,,,25.0,,,89.0,,6.0,3.0,32.0,,,,,0.0,51,,9,2,5,73,Good
+66.0,314,,,,,0.0,78.0,26,5.0,6.0,41.0,,,,4.0,4.0,49,,3,9,1,71,Bad
+60.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,1.0,1.0,29,No Installment Burden,,No Installment Loans,1,67,Bad
+70.0,197,,,,0.0,,91.0,,6.0,6.0,32.0,,,No Credit Inquiry,4.0,4.0,44,No Installment Burden,,1,4,63,Bad
+70.0,,,,,,,94.0,,6.0,6.0,,,,,,1.0,39,,5,3,1,73,Bad
+73.0,266,9.0,132.0,21.0,,,96.0,27,6.0,6.0,25.0,4.0,,,3.0,3.0,20,No Installment Burden,,2,0,45,Good
+64.0,224,,,,,,94.0,,4.0,6.0,,1.0,,No Credit Inquiry,0.0,0.0,71,23,,2,2,56,Bad
+54.0,,10.0,72.0,9.0,,,67.0,1,4.0,3.0,,,,,3.0,3.0,91,No Installment Burden,1,1,1,50,Bad
+67.0,,,,13.0,,0.0,87.0,,4.0,5.0,,0.0,,,,1.0,33,,3,2,1,83,Bad
+89.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,4.0,0.0,25.0,,,0.0,1,No Installment Burden,,No Installment Loans,0,50,Good
+59.0,,6.0,,,,,93.0,3,4.0,6.0,,,,,,1.0,80,,,2,2,100,Bad
+66.0,,,,,0.0,,92.0,,4.0,6.0,,,,,0.0,0.0,18,92,,2,1,58,Good
+85.0,,13.0,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,,,0.0,12,,,2,0,86,Good
+69.0,,,,,,0.0,94.0,,4.0,6.0,,,,0,1.0,1.0,53,,,1,1,60,Bad
+61.0,,4.0,9.0,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,,,,3.0,73,68,,3,1,80,Bad
+60.0,,,,5.0,,2.0,46.0,,3.0,2.0,,,,,,4.0,30,No Installment Burden,,1,0,67,Bad
+64.0,212,3.0,67.0,,,,100.0,Never Had Delinquency,6.0,8.0,,,,,,4.0,48,,,2,1,69,Bad
+57.0,,,,17.0,,0.0,88.0,2,4.0,6.0,,,18.0,0,0.0,0.0,32,No Installment Burden,,1,2,44,Bad
+84.0,,,109.0,,,,96.0,,6.0,6.0,,,,1,1.0,1.0,18,,2,4,0,67,Good
+72.0,,,83.0,27.0,0.0,,93.0,55,5.0,6.0,,5.0,,,,2.0,34,,6,3,1,69,Good
+55.0,,,,,,2.0,62.0,,0.0,2.0,13.0,,,,,0.0,13,,,2,0,60,Good
+89.0,,,111.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,47.0,No Inquiry Record,,0.0,6,,1,3,0,63,Good
+88.0,,,57.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,2.0,2.0,14,No Installment Burden,,No Installment Loans,0,33,Good
+58.0,118,,,14.0,,0.0,75.0,3,4.0,5.0,,,,,,0.0,62,,,4,0,90,Bad
+62.0,,13.0,80.0,,1.0,,87.0,,0.0,6.0,,,,,,0.0,40,No Installment Burden,,1,0,100,Bad
+84.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,2.0,6,No Installment Burden,,No Installment Loans,0,50,Good
+70.0,,1.0,,,,,100.0,Never Had Delinquency,7.0,8.0,23.0,,,No Credit Inquiry,3.0,3.0,50,,3,1,1,50,Bad
+75.0,,1.0,74.0,,1.0,,91.0,,6.0,4.0,,,,0,4.0,3.0,7,,,4,0,30,Bad
+78.0,281,,98.0,,,0.0,100.0,Never Had Delinquency,7.0,8.0,48.0,4.0,,,,1.0,24,19,7,1,2,50,Bad
+64.0,,,,,0.0,0.0,94.0,,6.0,6.0,37.0,,,No Credit Inquiry,1.0,1.0,62,,6,4,2,77,Good
+84.0,186,,,,,,100.0,Never Had Delinquency,7.0,8.0,,1.0,,0,,0.0,0,,,2,No Bank Revolving,50,Good
+73.0,317,,,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,,7.0,24,,,2,1,50,Bad
+81.0,,,83.0,23.0,,,92.0,,6.0,6.0,,,,0,,0.0,8,49,,2,0,33,Good
+73.0,,,,,1.0,,88.0,12,6.0,2.0,,,,,,1.0,25,No Installment Burden,2,1,0,43,Good
+56.0,,33.0,,2.0,,,50.0,,4.0,6.0,,,,,,6.0,No Revolving Burden,No Installment Burden,No Revolving Accounts,1,No Bank Revolving,100,Bad
+72.0,,,53.0,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,,,1.0,43,,,5,3,64,Good
+64.0,,,,25.0,,0.0,100.0,Never Had Delinquency,7.0,8.0,26.0,,62.0,,,1.0,78,,5,7,2,100,Bad
+73.0,,,75.0,17.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,18.0,,,,2.0,2.0,87,,,2,1,57,Bad
+74.0,,,84.0,,,,96.0,,6.0,6.0,,,,,,0.0,8,,6,3,0,64,Good
+73.0,,,,,,,92.0,,4.0,6.0,,,,0,0.0,0.0,9,No Installment Burden,,No Installment Loans,0,60,Bad
+68.0,,,,,,,86.0,,4.0,6.0,,,64.0,0,,1.0,27,,1,5,0,100,Bad
+70.0,,,93.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,,1.0,1.0,67,No Installment Burden,,1,5,69,Good
+85.0,,,,,,,97.0,39,6.0,6.0,42.0,1.0,22.0,,,1.0,0,No Installment Burden,,1,0,17,Good
+71.0,,12.0,,29.0,0.0,,93.0,,4.0,6.0,31.0,0.0,,,,2.0,36,,,2,1,67,Good
+66.0,175,,39.0,15.0,,,84.0,,4.0,6.0,19.0,5.0,21.0,,,3.0,9,,,3,0,57,Bad
+84.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,,,,0,,1.0,1,No Installment Burden,,1,0,27,Good
+60.0,263,1.0,108.0,,2.0,,83.0,,4.0,2.0,,,,0,2.0,1.0,49,,,1,2,71,Bad
+81.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,3.0,,,,,1.0,18,,,2,1,47,Good
+67.0,,,63.0,20.0,,,75.0,,4.0,6.0,,,55.0,0,0.0,0.0,4,,,3,0,60,Bad
+72.0,160,,69.0,,,,96.0,,4.0,6.0,,,,9,,0.0,21,76,4,11,0,88,Good
+62.0,86,,,,0.0,,92.0,,4.0,6.0,13.0,,,0,,0.0,46,No Installment Burden,,1,1,60,Bad
+81.0,,,54.0,,,0.0,93.0,,6.0,6.0,,,,No Credit Inquiry,0.0,0.0,2,No Installment Burden,,1,0,43,Bad
+63.0,31,,,,0.0,0.0,92.0,,4.0,6.0,,,42.0,,0.0,0.0,84,74,2,2,2,67,Bad
+88.0,,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,,,25.0,,,1.0,0,No Installment Burden,0,1,0,8,Good
+79.0,,,,14.0,,,100.0,Never Had Delinquency,7.0,8.0,14.0,,29.0,0,,0.0,30,No Installment Burden,,1,0,33,Good
+76.0,,,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,30.0,3.0,,,,0.0,22,No Installment Burden,9,No Installment Loans,3,47,Good
+71.0,175,,,,0.0,,93.0,,6.0,6.0,,,,,,1.0,76,No Installment Burden,,2,0,80,Bad
+89.0,,,130.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,9.0,No Credit Inquiry,,1.0,2,No Installment Burden,,No Installment Loans,0,50,Good
+75.0,,,123.0,,,0.0,83.0,20,6.0,6.0,,0.0,,,,1.0,7,No Installment Burden,,No Installment Loans,No Bank Revolving,75,Good
+62.0,,,,,2.0,,86.0,,0.0,2.0,,,,,,0.0,48,,,3,2,75,Bad
+67.0,,11.0,,7.0,,2.0,86.0,,6.0,6.0,8.0,1.0,14.0,No Credit Inquiry,0.0,0.0,59,No Installment Burden,3,No Installment Loans,1,60,Bad
+73.0,,,,,0.0,0.0,95.0,,4.0,6.0,,,,,,0.0,28,No Installment Burden,4,1,0,36,Good
+76.0,,,,,0.0,,100.0,Never Had Delinquency,7.0,8.0,20.0,4.0,40.0,,0.0,0.0,17,,,6,1,85,Good
+63.0,,,,,,,100.0,Never Had Delinquency,7.0,8.0,,3.0,,,,2.0,62,,,2,2,67,Bad
+87.0,,15.0,137.0,,,,100.0,Never Had Delinquency,7.0,8.0,,,,21,,0.0,4,No Installment Burden,4,2,0,46,Good
+76.0,,4.0,,,,0.0,100.0,Never Had Delinquency,7.0,8.0,,,32.0,,0.0,0.0,37,,3,3,1,60,Good
+54.0,,,,,1.0,,50.0,,3.0,5.0,,,,0,,0.0,81,No Installment Burden,4,1,1,100,Good
+57.0,,,,,,,92.0,,4.0,6.0,,,,No Credit Inquiry,,3.0,57,,,2,1,100,Bad
+83.0,,,181.0,,0.0,,92.0,72,6.0,6.0,,,36.0,No Inquiry Record,,0.0,16,,,2,0,47,Good
+62.0,192,,,22.0,0.0,,100.0,Never Had Delinquency,7.0,8.0,22.0,,,,,3.0,65,No Installment Burden,15,No Installment Loans,7,79,Bad
+72.0,,,,,1.0,1.0,100.0,Never Had Delinquency,6.0,8.0,,,,,,0.0,42,9,,2,2,67,Good
+66.0,138,,,,,,92.0,3,4.0,6.0,,,31.0,,,0.0,23,No Installment Burden,,1,0,83,Good
+66.0,124,8.0,58.0,,,,94.0,1,4.0,6.0,,,39.0,,2.0,2.0,54,56,,3,0,89,Bad
+75.0,159,,,,,0.0,98.0,Never Had Delinquency,5.0,7.0,,,59.0,9,,0.0,20,88,5,5,0,79,Good
+76.0,,,,5.0,,0.0,80.0,,6.0,6.0,,,,No Credit Inquiry,,1.0,13,,1,2,0,75,Good
+74.0,,,,3.0,,0.0,57.0,,4.0,5.0,7.0,,,,,5.0,5,,,1,0,67,Bad
+83.0,,,,,0.0,0.0,100.0,Never Had Delinquency,7.0,8.0,9.0,,,No Credit Inquiry,,1.0,10,90,,2,0,80,Bad
+75.0,,,111.0,21.0,,1.0,87.0,,6.0,3.0,,,,No Credit Inquiry,,2.0,50,,,3,2,62,Bad

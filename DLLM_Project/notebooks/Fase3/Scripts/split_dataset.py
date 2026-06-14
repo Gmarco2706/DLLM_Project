@@ -29,7 +29,7 @@ def split_dataset(input_path, num_splits=6):
     return output_files
 
 if __name__ == "__main__":
-    input_csv = "/Users/marco/Documents/Biometry/DLL/DLLM_Project/DLLM_Project/data/processed/Fase2/DataCorruption/heloc_DLLM/heloc_DLLM_imputation_test_corrupted_MCAR_10.csv"
+    input_csv = "/Users/marco/Documents/Biometry/DLL/DLLM_Project/DLLM_Project/data/processed/Fase2/DataCorruption/heloc_DLLM/heloc_DLLM_imputation_test_corrupted_MNAR_25.csv"
     
     # Esegue lo split
     split_dataset(input_csv, num_splits=6)

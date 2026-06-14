@@ -79,7 +79,7 @@ if __name__ == "__main__":
     base_dir_imp = "/Users/marco/Documents/Biometry/DLL/DLLM_Project/DLLM_Project/data/processed/Fase3/Imputated_DLLM"
     
     gt_file = os.path.join(base_dir_gt, "heloc_DLLM_imputation_test.csv")
-    mask_file = os.path.join(base_dir_mask, "heloc_DLLM_imputation_test_mask_MCAR_10.csv")
-    imp_file = os.path.join(base_dir_imp, "heloc_DLLM_discriminative_train_MCAR_10.csv")
+    mask_file = os.path.join(base_dir_mask, "heloc_DLLM_imputation_test_mask_MCAR_25.csv")
+    imp_file = os.path.join(base_dir_imp, "heloc_DLLM_discriminative_train_MCAR_25.csv")
     
     calculate_metrics(gt_file, imp_file, mask_file)
