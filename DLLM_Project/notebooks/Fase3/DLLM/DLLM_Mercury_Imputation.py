@@ -1,21 +1,15 @@
 #!/usr/bin/env python3
-"""
-DLLM Mercury Imputation Pipeline v3
-====================================
-- 6 chiavi API: ogni parte usa una chiave dedicata (part1→key1, part2→key2, …)
-- 6 worker paralleli (uno per parte)
-- Retry infiniti per rate limit (429) e server error (5xx) con backoff esponenziale
-- Retry su content=null (fino a 5 volte per riga) prima di salvare la riga originale
-- Final cleanup pass: dopo la concatenazione, ri-imputa le righe ancora incomplete
-"""
+
 import requests
 import re
 import csv
 import time
 import sys
 import os
+import shutil
 import logging
 import traceback
+import threading
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -28,12 +22,12 @@ import numpy as np
 
 # 6 Chiavi API Mercury — una per ogni parte del dataset
 API_KEYS = [
-    "sk_5c1e148a84cb092f29725c98dc52dc89",  # Part 1
-    "sk_41032897b1a239a1496f5c4a0ab93eb6",  # Part 2
-    "sk_c3c9e84badba79e892d924834e5e43e1",  # Part 3
-    "sk_3e9cb21cc308bd931927f8a134807fd1",   # Part 4
-    "sk_910423bd1c97a4bb993fdef134036cf8",                    # Part 5
-    "sk_c0047077aa1e1a77cec77e342881df68",                    # Part 6
+    "sk_f022c17ea40eb977c8e9d35d0ddc6767",  # Part 1
+    "sk_d2fcfb4842d56a797307c6ae31275dcd",  # Part 2
+    "sk_081ebcd349dae4b078a8fcfd773248c0",  # Part 3
+    "sk_193f5391952149974a26a775af3e8003",   # Part 4
+    "sk_6620af62465f8ab0f785420cc14bf51b",   # Part 5
+    "sk_f8f75dce754f66bf9092120a034eb924",  # Part 6
 ]
 
 # Percorsi base del progetto
@@ -61,7 +55,7 @@ MAX_WORKERS = NUM_SPLITS  # Un worker per parte = 6 worker
 
 # Se True, rielabora TUTTI i dataset da zero (cancella output esistenti).
 # Se False, salta i dataset/parti già completati (modalità resume).
-FORCE_REPROCESS = False
+FORCE_REPROCESS = True
 
 # Parametri modello Mercury
 MODEL = "mercury-2"
@@ -200,6 +194,155 @@ def extract_pairs(text: str) -> dict:
 class QuotaExhaustedException(Exception):
     """Eccezione lanciata quando la quota API è esaurita."""
     pass
+
+
+# ============================================================================
+# API KEY POOL (thread-safe, con fallback dinamico)
+# ============================================================================
+
+class APIKeyPool:
+    """
+    Pool thread-safe di chiavi API.
+    Quando una chiave esaurisce la quota, viene marcata come 'exhausted'
+    e i worker possono richiedere una chiave alternativa ancora attiva.
+    """
+
+    def __init__(self, keys: list):
+        self._lock = threading.Lock()
+        self._all_keys = list(keys)
+        self._alive_keys = set(range(len(keys)))   # indici delle chiavi attive
+        self._exhausted_keys = set()                # indici delle chiavi esaurite
+
+    def get_key(self, preferred_idx: int) -> str:
+        """Restituisce la chiave preferita se ancora attiva, altrimenti None."""
+        with self._lock:
+            if preferred_idx in self._alive_keys:
+                return self._all_keys[preferred_idx]
+        return None
+
+    def mark_exhausted(self, key: str) -> None:
+        """Marca una chiave come esaurita."""
+        with self._lock:
+            for i, k in enumerate(self._all_keys):
+                if k == key:
+                    self._alive_keys.discard(i)
+                    self._exhausted_keys.add(i)
+                    logger.warning(f"🔑 Chiave API #{i+1} marcata come esaurita. "
+                                 f"Chiavi attive rimaste: {len(self._alive_keys)}/{len(self._all_keys)}")
+                    break
+
+    def get_fallback_key(self, exclude_key: str = None) -> str | None:
+        """
+        Restituisce una chiave ancora attiva diversa da exclude_key.
+        Se non ci sono chiavi disponibili, restituisce None.
+        """
+        with self._lock:
+            for i in self._alive_keys:
+                if self._all_keys[i] != exclude_key:
+                    return self._all_keys[i]
+            return None
+
+    def get_any_alive_key(self) -> str | None:
+        """Restituisce una qualsiasi chiave ancora attiva."""
+        with self._lock:
+            for i in self._alive_keys:
+                return self._all_keys[i]
+            return None
+
+    def has_alive_keys(self) -> bool:
+        """Controlla se ci sono ancora chiavi attive."""
+        with self._lock:
+            return len(self._alive_keys) > 0
+
+    def alive_count(self) -> int:
+        """Restituisce il numero di chiavi ancora attive."""
+        with self._lock:
+            return len(self._alive_keys)
+
+    def get_status_summary(self) -> str:
+        """Restituisce un riepilogo dello stato delle chiavi."""
+        with self._lock:
+            alive = sorted(i + 1 for i in self._alive_keys)
+            exhausted = sorted(i + 1 for i in self._exhausted_keys)
+            return (f"Attive: {alive} ({len(alive)}/{len(self._all_keys)}) | "
+                    f"Esaurite: {exhausted}")
+
+
+# ============================================================================
+# TEST API KEYS
+# ============================================================================
+
+def test_api_keys(keys: list) -> list:
+    """
+    Testa tutte le chiavi API con una richiesta minimale.
+    Restituisce la lista degli indici delle chiavi funzionanti.
+    """
+    logger.info(f"\n{'='*60}")
+    logger.info("🔑 TEST CHIAVI API")
+    logger.info(f"{'='*60}")
+
+    working_keys = []
+    test_prompt = "Reply with just the number 1."
+
+    for i, key in enumerate(keys):
+        key_label = f"Chiave #{i+1}"
+        try:
+            response = requests.post(
+                API_URL,
+                headers={
+                    "Authorization": f"Bearer {key}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": MODEL,
+                    "temperature": 0.0,
+                    "messages": [{"role": "user", "content": test_prompt}],
+                    "max_tokens": 5
+                },
+                timeout=30
+            )
+
+            if response.status_code == 200:
+                try:
+                    data = response.json()
+                    content = data["choices"][0]["message"]["content"]
+                    if content is not None:
+                        logger.info(f"  ✅ {key_label}: OK (risposta: '{content.strip()[:20]}')")
+                        working_keys.append(i)
+                    else:
+                        logger.warning(f"  ⚠️  {key_label}: HTTP 200 ma content=null")
+                        working_keys.append(i)  # potrebbe funzionare comunque
+                except (KeyError, IndexError, ValueError) as e:
+                    logger.warning(f"  ⚠️  {key_label}: risposta malformata ({e})")
+                    working_keys.append(i)  # potrebbe funzionare
+            elif response.status_code == 402:
+                logger.error(f"  ❌ {key_label}: QUOTA ESAURITA (HTTP 402)")
+            elif response.status_code == 401:
+                logger.error(f"  ❌ {key_label}: NON AUTORIZZATA (HTTP 401)")
+            elif response.status_code == 429:
+                logger.warning(f"  ⚠️  {key_label}: Rate limit (HTTP 429) — probabilmente funzionante")
+                working_keys.append(i)
+            else:
+                err_msg = response.text[:100]
+                logger.warning(f"  ⚠️  {key_label}: HTTP {response.status_code} — {err_msg}")
+                working_keys.append(i)  # non è 402 o 401, potrebbe funzionare
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"  ⚠️  {key_label}: Timeout (30s) — potrebbe funzionare")
+            working_keys.append(i)
+        except requests.exceptions.RequestException as e:
+            logger.error(f"  ❌ {key_label}: Errore di rete — {e}")
+
+        # Piccola pausa tra i test per evitare rate limit
+        time.sleep(0.5)
+
+    logger.info(f"\n  Risultato: {len(working_keys)}/{len(keys)} chiavi funzionanti")
+    if working_keys:
+        logger.info(f"  Chiavi OK: {[i+1 for i in working_keys]}")
+    else:
+        logger.error("  ❌ NESSUNA CHIAVE FUNZIONANTE! Impossibile procedere.")
+
+    return working_keys
 
 
 # ============================================================================
@@ -404,19 +547,22 @@ def impute_row(row: dict, api_key: str, part_label: str) -> dict:
 
 
 # ============================================================================
-# IMPUTATION DI UNA PARTE (worker per thread)
+# IMPUTATION DI UNA PARTE (worker per thread, con fallback chiavi)
 # ============================================================================
 
 def impute_part(input_csv: Path, output_csv: Path, api_key: str,
-                part_num: int, dataset_label: str) -> bool:
+                part_num: int, dataset_label: str,
+                key_pool: APIKeyPool = None) -> bool:
     """
     Imputa un singolo file parte.
     Supporta il resume: se output_csv esiste già parzialmente, riprende.
+    Se key_pool è fornito, in caso di quota esaurita tenta con un'altra chiave.
 
     Returns:
         True se l'imputazione è completata con successo, False se interrotta.
     """
     part_label = f"{dataset_label}/part{part_num}"
+    current_key = api_key
 
     # Carica input
     try:
@@ -458,7 +604,32 @@ def impute_part(input_csv: Path, output_csv: Path, api_key: str,
                     continue  # salta righe già processate
 
                 if needs_imputation(row):
-                    result = impute_row(row, api_key, part_label)
+                    # Tenta l'imputazione, con fallback su altre chiavi
+                    result = None
+                    while result is None:
+                        try:
+                            result = impute_row(row, current_key, part_label)
+                        except QuotaExhaustedException:
+                            # Marca la chiave come esaurita nel pool
+                            if key_pool:
+                                key_pool.mark_exhausted(current_key)
+                                fallback = key_pool.get_fallback_key(exclude_key=current_key)
+                                if fallback:
+                                    logger.warning(
+                                        f"[{part_label}] 🔄 Quota esaurita, passo a chiave di fallback. "
+                                        f"Stato pool: {key_pool.get_status_summary()}"
+                                    )
+                                    current_key = fallback
+                                    continue  # riprova con la nuova chiave
+                                else:
+                                    logger.error(
+                                        f"[{part_label}] ❌ Tutte le chiavi API esaurite! "
+                                        f"Impossibile continuare."
+                                    )
+                                    return False
+                            else:
+                                logger.error(f"[{part_label}] ❌ Quota esaurita (nessun pool disponibile).")
+                                return False
                 else:
                     result = row
 
@@ -474,6 +645,9 @@ def impute_part(input_csv: Path, output_csv: Path, api_key: str,
         return True
 
     except QuotaExhaustedException:
+        # Quota esaurita fuori dal loop interno (non dovrebbe succedere, ma per sicurezza)
+        if key_pool:
+            key_pool.mark_exhausted(current_key)
         logger.error(f"[{part_label}] ❌ Interrotta: quota API esaurita.")
         return False
     except Exception as e:
@@ -494,6 +668,42 @@ def concatenate_parts(part_files: list, output_path: Path):
     combined.to_csv(output_path, index=False)
     logger.info(f"  Dataset finale: {len(combined)} righe salvate in {output_path.name}")
     return combined
+
+
+# ============================================================================
+# PULIZIA FILE INTERMEDI
+# ============================================================================
+
+def cleanup_intermediate_files(part_input_files: list, part_output_files: list,
+                                dataset_label: str):
+    """
+    Elimina i file intermedi (parti split dell'input e parti imputate di output)
+    dopo la concatenazione riuscita.
+    """
+    logger.info(f"[{dataset_label}] 🗑️  Pulizia file intermedi...")
+    deleted_count = 0
+
+    # Elimina le parti split dell'input (create da split_dataset)
+    for f in part_input_files:
+        if f.exists():
+            try:
+                f.unlink()
+                logger.info(f"[{dataset_label}]   Eliminato split input: {f.name}")
+                deleted_count += 1
+            except OSError as e:
+                logger.warning(f"[{dataset_label}]   Impossibile eliminare {f.name}: {e}")
+
+    # Elimina le parti imputate di output (nella directory DiscriminativeParts)
+    for f in part_output_files:
+        if f.exists():
+            try:
+                f.unlink()
+                logger.info(f"[{dataset_label}]   Eliminato part output: {f.name}")
+                deleted_count += 1
+            except OSError as e:
+                logger.warning(f"[{dataset_label}]   Impossibile eliminare {f.name}: {e}")
+
+    logger.info(f"[{dataset_label}] 🗑️  Pulizia completata: {deleted_count} file eliminati")
 
 
 # ============================================================================
@@ -616,8 +826,11 @@ def process_dataset(mechanism: str, percentage: str) -> bool:
     # --- STEP 1: SPLIT ---
     part_input_files = split_dataset(input_file, NUM_SPLITS)
 
-    # --- STEP 2: IMPUTE (in parallelo, 1 chiave per parte) ---
+    # --- STEP 2: IMPUTE (in parallelo, con pool di chiavi condiviso) ---
     PARTS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Crea il pool condiviso di chiavi API
+    key_pool = APIKeyPool(API_KEYS)
 
     # Determina quali parti devono ancora essere processate
     parts_to_process = []
@@ -634,30 +847,42 @@ def process_dataset(mechanism: str, percentage: str) -> bool:
         logger.info(f"[{dataset_label}] Tutte le parti sono già imputate. Procedo alla concatenazione.")
     else:
         logger.info(f"[{dataset_label}] Parti da processare: {[p+1 for p in parts_to_process]}")
+        logger.info(f"[{dataset_label}] Stato pool chiavi: {key_pool.get_status_summary()}")
 
         num_keys = len(API_KEYS)
         all_success = True
 
-        # Ogni parte usa la propria chiave dedicata
+        # Ogni parte usa la propria chiave dedicata, con fallback dal pool
         effective_workers = min(MAX_WORKERS, len(parts_to_process))
         logger.info(f"[{dataset_label}] Lancio {effective_workers} worker paralleli "
-                   f"({num_keys} chiavi API disponibili)")
+                   f"({key_pool.alive_count()} chiavi API attive)")
 
         with ThreadPoolExecutor(max_workers=effective_workers) as executor:
             futures = {}
             for part_idx in parts_to_process:
-                # Assegnazione chiave: part_idx % num_keys
-                # Con 6 chiavi e 6 parti: ogni parte ha la sua chiave dedicata
+                # Assegnazione chiave iniziale: part_idx % num_keys
+                # Se la chiave è esaurita, il worker userà il pool per ottenerne un'altra
                 key_idx = part_idx % num_keys
-                api_key = API_KEYS[key_idx]
-                logger.info(f"[{dataset_label}/part{part_idx+1}] Usa chiave API #{key_idx+1}")
+                api_key = key_pool.get_key(key_idx)
+                if api_key is None:
+                    # Chiave preferita già esaurita, prendi qualsiasi chiave attiva
+                    api_key = key_pool.get_any_alive_key()
+                    if api_key is None:
+                        logger.error(f"[{dataset_label}] ❌ Nessuna chiave API disponibile!")
+                        return False
+                    logger.warning(f"[{dataset_label}/part{part_idx+1}] Chiave #{key_idx+1} esaurita, "
+                                 f"uso chiave di fallback")
+                else:
+                    logger.info(f"[{dataset_label}/part{part_idx+1}] Usa chiave API #{key_idx+1}")
+
                 future = executor.submit(
                     impute_part,
                     part_input_files[part_idx],
                     part_output_files[part_idx],
                     api_key,
                     part_idx + 1,
-                    dataset_label
+                    dataset_label,
+                    key_pool
                 )
                 futures[future] = part_idx + 1
 
@@ -671,6 +896,8 @@ def process_dataset(mechanism: str, percentage: str) -> bool:
                 except Exception as e:
                     all_success = False
                     logger.error(f"[{dataset_label}/part{part_num}] Eccezione: {e}")
+
+        logger.info(f"[{dataset_label}] Stato finale pool chiavi: {key_pool.get_status_summary()}")
 
         if not all_success:
             logger.error(f"[{dataset_label}] ⚠️  Alcune parti hanno avuto errori. "
@@ -696,6 +923,10 @@ def process_dataset(mechanism: str, percentage: str) -> bool:
     else:
         logger.warning(f"[{dataset_label}] ⚠️  Mismatch righe: input={len(input_df)}, "
                       f"output={len(output_df)}")
+
+    # --- STEP 3.5: PULIZIA FILE INTERMEDI ---
+    # Dopo concatenazione riuscita, elimina le parti per ripulire il progetto
+    cleanup_intermediate_files(part_input_files, part_output_files, dataset_label)
 
     # --- STEP 4: CLEANUP PASS (ri-imputa righe incomplete) ---
     # Usa la prima chiave disponibile per il cleanup (singolo thread)
@@ -738,6 +969,19 @@ def main():
                     f"Sostituiscile nel file prima di eseguire.")
         logger.error(f"   Chiavi da sostituire: {placeholder_keys}")
         sys.exit(1)
+
+    # --- TEST CHIAVI API ---
+    working_key_indices = test_api_keys(API_KEYS)
+    if not working_key_indices:
+        logger.error("❌ Nessuna chiave API funzionante. Uscita.")
+        sys.exit(1)
+    elif len(working_key_indices) < len(API_KEYS):
+        failed_indices = set(range(len(API_KEYS))) - set(working_key_indices)
+        logger.warning(f"⚠️  {len(failed_indices)} chiavi non disponibili: "
+                      f"{[i+1 for i in sorted(failed_indices)]}")
+        logger.info(f"Procedo con {len(working_key_indices)} chiavi funzionanti.")
+    else:
+        logger.info("✅ Tutte le chiavi API sono funzionanti!")
 
     results = {}
     start_time = time.time()
@@ -838,6 +1082,20 @@ def main():
             logger.info(f"  ✅ {dataset_label}: {len(df_final)} righe, tutto pulito")
         else:
             logger.warning(f"  ⚠️  {dataset_label}: {len(df_final)} righe, {broken} ancora incomplete")
+
+    # --- PULIZIA DIRECTORY DISCRIMINATIVEPARTS ---
+    # Se la directory è vuota (tutti i file intermedi sono stati eliminati), rimuovila
+    if PARTS_OUTPUT_DIR.exists():
+        remaining_files = list(PARTS_OUTPUT_DIR.iterdir())
+        if not remaining_files:
+            try:
+                PARTS_OUTPUT_DIR.rmdir()
+                logger.info(f"🗑️  Directory '{PARTS_OUTPUT_DIR.name}' vuota eliminata.")
+            except OSError as e:
+                logger.warning(f"Impossibile eliminare directory '{PARTS_OUTPUT_DIR.name}': {e}")
+        else:
+            logger.info(f"📁 Directory '{PARTS_OUTPUT_DIR.name}' contiene ancora "
+                       f"{len(remaining_files)} file (parti non completate o in errore).")
 
     total_elapsed = time.time() - start_time
     logger.info(f"\nTempo totale (con cleanup): {total_elapsed/60:.1f} min")
