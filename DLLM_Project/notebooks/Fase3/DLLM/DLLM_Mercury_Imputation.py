@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import random
 import requests
 import re
 import csv
@@ -22,12 +23,12 @@ import numpy as np
 
 # 6 Chiavi API Mercury — una per ogni parte del dataset
 API_KEYS = [
-    "sk_f022c17ea40eb977c8e9d35d0ddc6767",  # Part 1
-    "sk_d2fcfb4842d56a797307c6ae31275dcd",  # Part 2
-    "sk_081ebcd349dae4b078a8fcfd773248c0",  # Part 3
-    "sk_193f5391952149974a26a775af3e8003",   # Part 4
-    "sk_6620af62465f8ab0f785420cc14bf51b",   # Part 5
-    "sk_f8f75dce754f66bf9092120a034eb924",  # Part 6
+    "sk_0dd4042c2ccce1b874bd80ebc3f214eb",  # Part 1
+    "sk_01644b633cc334645807937b4eb8ac06",  # Part 2
+    "sk_d67325388d4204e7306bd1e9ab21e028",  # Part 3
+    "sk_f6e7396a1319c6347f216a250b5d477c",   # Part 4
+    "sk_ebe52dcfbe9b7973f19d8b461a3caed9",   # Part 5
+    "sk_7537ae54627fc43115a0b949eea0f572",  # Part 6
 ]
 
 # Percorsi base del progetto
@@ -55,7 +56,7 @@ MAX_WORKERS = NUM_SPLITS  # Un worker per parte = 6 worker
 
 # Se True, rielabora TUTTI i dataset da zero (cancella output esistenti).
 # Se False, salta i dataset/parti già completati (modalità resume).
-FORCE_REPROCESS = True
+FORCE_REPROCESS = False
 
 # Parametri modello Mercury
 MODEL = "mercury-2"
@@ -152,6 +153,38 @@ def get_missing_fields(row: dict) -> list:
     return [f for f in FIELDS if _needs_replacement(row.get(f, ""))]
 
 
+# ============================================================================
+# FEW-SHOT POOL
+# ============================================================================
+CLEAN_TRAIN_PATH = PROJECT_ROOT / "data" / "processed" / "Fase2" / "SplitDataset" / "Split_DLLM" / "heloc_DLLM_imputation_train.csv"
+
+good_pool = []
+bad_pool = []
+
+def _load_few_shot_pool() -> None:
+    """Carica il pool di esempi few-shot dal dataset clean di training."""
+    global good_pool, bad_pool
+    if not CLEAN_TRAIN_PATH.exists():
+        logger.warning(f"Dataset clean non trovato in {CLEAN_TRAIN_PATH}. Few-shot disabilitato.")
+        return
+    try:
+        df_clean = pd.read_csv(CLEAN_TRAIN_PATH)
+        _good, _bad = [], []
+        for _, r in df_clean.iterrows():
+            row_dict = r.to_dict()
+            if any(_is_missing(row_dict.get(f, "")) or _is_string_value(row_dict.get(f, "")) for f in FIELDS):
+                continue  # salta righe con valori da imputare
+            risk = row_dict.get('RiskPerformance', '')
+            row_prompt = {k: v for k, v in row_dict.items() if k != 'RiskPerformance'}
+            if risk == 'Good':
+                _good.append(row_prompt)
+            elif risk == 'Bad':
+                _bad.append(row_prompt)
+        good_pool, bad_pool = _good, _bad
+        logger.info(f"Few-shot pool caricato: {len(good_pool)} Good completi, {len(bad_pool)} Bad completi.")
+    except Exception as e:
+        logger.error(f"Errore caricamento few-shot pool: {e}")
+
 def build_row_string_optimized(row: dict) -> str:
     """Costruisce una stringa compatta della riga per il prompt."""
     parts = []
@@ -163,26 +196,29 @@ def build_row_string_optimized(row: dict) -> str:
     return ",".join(parts)
 
 
-def build_prompt_optimized(row_str: str, missing_fields: list) -> str:
+def build_prompt_optimized(row_str: str, missing_fields: list, few_shot_str: str = "") -> str:
     """Costruisce il prompt per il modello Mercury."""
     if missing_fields:
         missing_fmt = ",".join(f"{f}=?" for f in missing_fields)
-        example = (
-            "Example:\n"
-            "Input: ExternalRiskEstimate=86,MSinceOldestTradeOpen=?,"
-            "AverageMInFile=?,NumTotalTrades=12\n"
-            "Output: MSinceOldestTradeOpen=219,AverageMInFile=97\n"
-        )
+        if few_shot_str:
+            example = f"Here are 4 examples of valid values from the dataset (showing only relevant fields):\n{few_shot_str}\n\nNow impute the following row:\n"
+        else:
+            example = (
+                "Example:\n"
+                "Input: ExternalRiskEstimate=86,MSinceOldestTradeOpen=?,"
+                "AverageMInFile=?,NumTotalTrades=12\n"
+                "Output: MSinceOldestTradeOpen=219,AverageMInFile=97\n"
+            )
     else:
         missing_fmt = ""
         example = ""
 
-    return f"""Impute the missing values (marked with ?) in this HELOC credit row.
-All values MUST be numeric (integers or decimals). Do not return strings or text.
-Do not change existing values.
-Return only the imputed fields: {missing_fmt}
-
-{example}Row: {row_str}"""
+    return (f"Impute the missing values (marked with ?) in this HELOC credit row.\n"
+            f"All values MUST be numeric (integers or decimals). Do not return strings or text.\n"
+            f"Do not change existing values.\n"
+            f"Return only the imputed fields: {missing_fmt}\n\n"
+            f"{example}"
+            f"Row: {row_str}")
 
 
 def extract_pairs(text: str) -> dict:
@@ -361,11 +397,12 @@ def split_dataset(input_path: Path, num_splits: int = NUM_SPLITS) -> list:
     splits = [df.loc[idx] for idx in splits_indices]
 
     output_files = []
-    base_dir = input_path.parent
     base_name = input_path.stem
+    # Scrive le parti nella directory PARTS_OUTPUT_DIR invece che accanto all'input
+    PARTS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     for i, split_df in enumerate(splits):
-        output_path = base_dir / f"{base_name}_part{i+1}.csv"
+        output_path = PARTS_OUTPUT_DIR / f"{base_name}_part{i+1}.csv"
         split_df.to_csv(output_path, index=False)
         output_files.append(output_path)
         logger.info(f"  Parte {i+1}: {len(split_df)} righe → {output_path.name}")
@@ -408,8 +445,29 @@ def impute_row(row: dict, api_key: str, part_label: str) -> dict:
     if not missing:
         return row
 
+    few_shot_str = ""
+    if len(good_pool) >= 2 and len(bad_pool) >= 2:
+        sampled_good = random.sample(good_pool, 2)
+        sampled_bad = random.sample(bad_pool, 2)
+        sampled = sampled_good + sampled_bad
+        random.shuffle(sampled)
+        
+        # Seleziona solo i campi mancanti + un paio di ancore per dare contesto
+        key_fields = ["ExternalRiskEstimate", "NumTotalTrades"]
+        fields_to_show = []
+        for f in key_fields:
+            if f not in missing:
+                fields_to_show.append(f)
+        fields_to_show.extend(missing)
+        
+        lines = []
+        for i, s_row in enumerate(sampled):
+            s_str = ",".join(f"{f}={s_row.get(f,'')}" for f in fields_to_show if f in s_row)
+            lines.append(f"Example {i+1}: {s_str}")
+        few_shot_str = "\n".join(lines)
+
     row_str = build_row_string_optimized(row)
-    prompt = build_prompt_optimized(row_str, missing)
+    prompt = build_prompt_optimized(row_str, missing, few_shot_str)
 
     network_retries = 0
     quota_errors = 0
@@ -427,7 +485,7 @@ def impute_row(row: dict, api_key: str, part_label: str) -> dict:
                 json={
                     "model": MODEL,
                     "temperature": TEMPERATURE,
-                    "messages": [{"role": "user", "content": prompt}]
+                    "messages": [{"role": "user", "content": prompt}],
                 },
                 timeout=90
             )
@@ -634,11 +692,11 @@ def impute_part(input_csv: Path, output_csv: Path, api_key: str,
                     result = row
 
                 writer.writerow(result)
-                out_f.flush()
 
-                # Log progresso ogni 50 righe o alla fine
+                # Flush e log progresso ogni 50 righe o alla fine
                 current = idx + 1
                 if current % 50 == 0 or current == total_rows:
+                    out_f.flush()
                     logger.info(f"[{part_label}] Progresso: {current}/{total_rows} righe")
 
         logger.info(f"[{part_label}] ✅ Completata! ({total_rows} righe)")
@@ -970,6 +1028,9 @@ def main():
         logger.error(f"   Chiavi da sostituire: {placeholder_keys}")
         sys.exit(1)
 
+    # --- CARICA FEW-SHOT POOL ---
+    _load_few_shot_pool()
+
     # --- TEST CHIAVI API ---
     working_key_indices = test_api_keys(API_KEYS)
     if not working_key_indices:
@@ -1065,7 +1126,7 @@ def main():
                 else:
                     logger.warning(f"  [{dataset_label}] Ancora {still_broken} righe dopo pass {pass_num}")
 
-    # Riepilogo finale post-cleanup
+    # Riepilogo finale post-cleanup (rilegge i CSV solo se non erano già stati analizzati sopra)
     logger.info(f"\n{'='*60}")
     logger.info("RIEPILOGO POST-CLEANUP")
     logger.info(f"{'='*60}")
@@ -1076,12 +1137,14 @@ def main():
             logger.info(f"  ❌ {dataset_label}: file non esiste")
             continue
         df_final = pd.read_csv(final_csv, dtype=str, keep_default_na=False)
-        broken = sum(1 for idx in range(len(df_final))
-                     if get_missing_fields(df_final.iloc[idx].to_dict()))
-        if broken == 0:
-            logger.info(f"  ✅ {dataset_label}: {len(df_final)} righe, tutto pulito")
-        else:
-            logger.warning(f"  ⚠️  {dataset_label}: {len(df_final)} righe, {broken} ancora incomplete")
+        broken = sum(
+            1 for idx in range(len(df_final))
+            if get_missing_fields(df_final.iloc[idx].to_dict())
+        )
+        status = "✅" if broken == 0 else "⚠️ "
+        msg = "tutto pulito" if broken == 0 else f"{broken} ancora incomplete"
+        log_fn = logger.info if broken == 0 else logger.warning
+        log_fn(f"  {status} {dataset_label}: {len(df_final)} righe, {msg}")
 
     # --- PULIZIA DIRECTORY DISCRIMINATIVEPARTS ---
     # Se la directory è vuota (tutti i file intermedi sono stati eliminati), rimuovila
