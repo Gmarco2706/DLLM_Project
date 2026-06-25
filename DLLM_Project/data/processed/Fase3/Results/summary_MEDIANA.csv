@@ -1,0 +1,10 @@
+dataset,missing_strategy,missing_pct,mean_accuracy,mean_f1_score,n_rows
+heloc_ML,MAR,10,0.699561,0.694397,1
+heloc_ML,MAR,25,0.711051,0.692335,1
+heloc_ML,MAR,40,0.69145,0.673345,1
+heloc_ML,MCAR,10,0.716796,0.707198,1
+heloc_ML,MCAR,25,0.693815,0.662695,1
+heloc_ML,MCAR,40,0.656979,0.57478,1
+heloc_ML,MNAR,10,0.719162,0.713941,1
+heloc_ML,MNAR,25,0.692802,0.688165,1
+heloc_ML,MNAR,40,0.680297,0.662384,1
